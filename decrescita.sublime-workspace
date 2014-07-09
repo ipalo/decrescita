@@ -1,0 +1,252 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"search",
+				"search_cache"
+			],
+			[
+				"localt",
+				"localtime()	date Function"
+			],
+			[
+				"prin",
+				"print_r"
+			],
+			[
+				"sea",
+				"search_cache"
+			],
+			[
+				"func",
+				"function_exists()	Core Function"
+			],
+			[
+				"encode",
+				"json_encode"
+			],
+			[
+				"do",
+				"do_ajax_call"
+			],
+			[
+				"plann",
+				"plannify_update_search_cache  (function)"
+			],
+			[
+				"fal",
+				"FALSE	Core Constant"
+			],
+			[
+				"pri",
+				"print_r"
+			],
+			[
+				"re",
+				"response"
+			],
+			[
+				"wp_remote",
+				"wp_remote_get"
+			],
+			[
+				"Plannify",
+				"Plannify_for_WP"
+			],
+			[
+				"Pla",
+				"Plannify_for_WP_Settings"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"git",
+				"Git: Pull"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 602.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/Ipalo/Sites/plannify/wp-content/plugins/plannify-for-wp/README.md",
+		"/Users/Ipalo/Sites/plannify/wp-content/plugins/plannify-for-wp/.gitignore",
+		"/Users/Ipalo/Sites/plannify/wp-content/plugins/plannify-for-wp/plugin_setup.php",
+		"/Users/Ipalo/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/Ipalo/Sites/plannify/wp-content/plugins/plannify-for-wp/readme.md",
+		"/Users/Ipalo/Sites/plannify/wp-content/plugins/plannify-for-wp/assets/admin_template.php",
+		"/Users/Ipalo/Sites/plannify/wp-content/plugins/plannify-for-wp/assets/settings.php",
+		"/Users/Ipalo/Sites/plannify/wp-content/plugins/plannify-for-wp/settings.php"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"API_username",
+			"API_password",
+			"API_username",
+			"www.rojadirecta.me",
+			"text_domain",
+			"foo_widget",
+			"Plannify_for_WP",
+			"setting_b",
+			"setting_a",
+			"WP Plugin Template Settings",
+			"WP_Plugin_Template",
+			"wp_plugin_template",
+			"WP_Plugin_Template"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 80.0
+	},
+	"project": "decrescita.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 225.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
