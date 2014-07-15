@@ -8,8 +8,36 @@ body {
 	background-color: #fff;
 }
 
-.placeholder {
-	background-color: #e3e3e3;
+.navbar{
+	margin-bottom: 0px;
+}
+
+#page-container{
+	background-color: #fff;
+}
+
+
+#definition{
+	min-height: 250px;
+	background-color: #e0e0dd;
+}
+
+#secondary-menu{
+	background-color: #d8d8d1;
+}
+
+#tags{
+	background-color: #EBEBE7;
+	margin-bottom: 20px;
+}
+
+
+footer{
+	background-color: #ecedec;
+}
+
+.placeholder{
+	background-color: #fd8a25;
 	height: 100px;
 }
 
