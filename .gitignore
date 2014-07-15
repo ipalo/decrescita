@@ -13,3 +13,5 @@ sitemap.xml.gz
 wp-config.php
 decrescita.sublime-project
 decrescita.sublime-workspace
+.htaccess
+.htpasswd
