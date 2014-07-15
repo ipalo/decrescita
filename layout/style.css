@@ -8,9 +8,13 @@ body {
 	background-color: #fff;
 }
 
+footer{
+	background-color: #ecedec;
+}
+
 /*scaffolding*/
 .placeholder{
-	background-color: #e3e3e3;
+	background-color: #fd8a25;
 	height: 100px;
 }
 
