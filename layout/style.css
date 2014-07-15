@@ -4,22 +4,29 @@ body {
   padding-bottom: 20px;
 }
 
+.navbar{
+	margin-bottom: 0px;
+}
+
 #page-container{
 	background-color: #fff;
+}
+
+
+#definition{
+	min-height: 250px;
+	background-color: #e0e0dd;
 }
 
 #secondary-menu{
 	background-color: #d8d8d1;
 }
 
-.navbar{
-	margin-bottom: 0px;
-}
-
 #tags{
 	background-color: #EBEBE7;
 	margin-bottom: 20px;
 }
+
 
 footer{
 	background-color: #ecedec;
