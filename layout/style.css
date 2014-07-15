@@ -4,13 +4,18 @@ body {
   padding-bottom: 20px;
 }
 
-#page-container{
+#page-container {
 	background-color: #fff;
 }
 
-/*scaffolding*/
-.placeholder{
+.placeholder {
 	background-color: #e3e3e3;
 	height: 100px;
 }
 
+/**
+* menu tools
+*/
+#tools_menu li a {
+	background-color: #ffcf22;
+}
