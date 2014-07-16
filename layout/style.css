@@ -4,6 +4,10 @@ body {
   padding-bottom: 20px;
 }
 
+.h2{
+	
+}
+
 #page-container {
 	background-color: #fff;
 }
@@ -41,13 +45,20 @@ body {
 	background-color: #fcb421;
 }
 
-#video{
+.video{
 	background-color: #cdc8bf;
 }
 
-#mediateca{
+.mediateca{
 	border-left: 8px solid #fecd46;
 	padding-left: 15px;
+}
+
+#box-venezia,
+#eventi,
+#pubblicazioni,
+#in-evidenza{
+	background-color: #cdc8bf;
 }
 
 footer{
@@ -64,7 +75,7 @@ footer{
 .placeholder-video{
 	background-color: #fd8a25;
 	height: 150px;
-	width: 300px;
+	width: 280px;
 }
 
 /**
