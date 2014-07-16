@@ -46,9 +46,9 @@ footer{
 * menu tools
 */
 
-#tools-menu {
-	
-
+/*TODO: fix position on resizing window at @mediaquery px limit dimensions*/
+#tools-menu .right {
+	float: right;
 }
 
 #tools-menu ul {
