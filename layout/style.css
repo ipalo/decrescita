@@ -20,6 +20,7 @@ body {
 
 #definition{
 	min-height: 250px;
+	background: url(img/decrescita-illustrazione-menu.png) center bottom no-repeat;
 	background-color: #e0e0dd;
 }
 
@@ -30,6 +31,10 @@ body {
 #tags{
 	background-color: #EBEBE7;
 	margin-bottom: 20px;
+}
+
+.label-categoria{
+
 }
 
 
