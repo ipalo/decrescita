@@ -5,7 +5,7 @@ body {
 }
 
 .h2{
-	
+
 }
 
 #page-container {
@@ -55,10 +55,24 @@ body {
 }
 
 #box-venezia,
-#eventi,
-#pubblicazioni,
-#in-evidenza{
+#eventi-home,
+#pubblicazioni-home,
+#in-evidenza-home{
 	background-color: #cdc8bf;
+}
+
+#eventi-home ul{
+	margin: 0;
+	padding: 0;
+}
+
+#eventi-home ul li{
+	list-style: none;
+}
+
+#ultime-notizie-home ul{
+	margin: :0;
+	padding-left: 15px;
 }
 
 footer{
