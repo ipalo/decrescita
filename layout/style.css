@@ -33,18 +33,38 @@ body {
 	margin-bottom: 20px;
 }
 
-.label-categoria{
-
+#tags ul li{
+	list-style: none;
 }
 
+.label-categoria{
+	background-color: #fcb421;
+}
+
+#video{
+	background-color: #cdc8bf;
+}
+
+#mediateca{
+	border-left: 8px solid #fecd46;
+	padding-left: 15px;
+}
 
 footer{
 	background-color: #ecedec;
 }
 
+/*scaffolding*/
+
 .placeholder{
 	background-color: #fd8a25;
 	height: 100px;
+}
+
+.placeholder-video{
+	background-color: #fd8a25;
+	height: 150px;
+	width: 300px;
 }
 
 /**
