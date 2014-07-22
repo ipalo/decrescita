@@ -4,10 +4,6 @@ body {
   padding-bottom: 20px;
 }
 
-.h2{
-
-}
-
 #page-container {
 	background-color: #fff;
 }
@@ -26,6 +22,10 @@ body {
 	min-height: 250px;
 	background: url(img/decrescita-illustrazione-menu.png) center bottom no-repeat;
 	background-color: #e0e0dd;
+}
+
+#definition h2{
+	padding-left: 10px;
 }
 
 #secondary-menu{

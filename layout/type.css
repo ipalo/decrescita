@@ -2,3 +2,17 @@
 #tags{
 	font-family: Georgia,Serif;
 }
+
+#definition h2{
+	color: #a01d21;
+}
+
+#definition h2 span{
+	font-family: Georgia,Serif;
+	color: #000;
+}
+
+#definition h2 span a{
+	color: #000;
+	text-decoration: underline;
+}
