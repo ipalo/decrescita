@@ -12,6 +12,18 @@ body {
 	margin-bottom: 0px;
 }
 
+.navbar-brand{
+	background: url(img/logo-decrescita.png) left top no-repeat;
+	width: 277px;
+	height: 50px;
+}
+
+#primary-menu{
+	height: 70px;
+	padding: 10px 20px;
+}
+
+
 #page-container{
 	background-color: #fff;
 	position: relative;
@@ -19,9 +31,9 @@ body {
 
 
 #definition{
-	min-height: 250px;
+	min-height: 245px;
 	background: url(img/decrescita-illustrazione-menu.png) center bottom no-repeat;
-	background-color: #e0e0dd;
+	background-color: #E5E3E2;
 }
 
 #definition h2{
@@ -44,10 +56,6 @@ body {
 #tags{
 	background-color: #EBEBE7;
 	margin-bottom: 20px;
-}
-
-#tags ul li{
-	list-style: none;
 }
 
 .label-categoria{
@@ -73,10 +81,6 @@ body {
 #eventi-home ul{
 	margin: 0;
 	padding: 0;
-}
-
-#eventi-home ul li{
-	list-style: none;
 }
 
 #ultime-notizie-home ul{
