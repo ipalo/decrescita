@@ -28,6 +28,15 @@ body {
 	padding-left: 10px;
 }
 
+#definition h2 span a{
+	border-bottom: 3px solid #a01d21;
+}
+
+#definition h2 span a:hover,
+#definition h2 span a:active{
+	text-decoration: none;
+}
+
 #secondary-menu{
 	background-color: #d8d8d1;
 }
@@ -50,7 +59,7 @@ body {
 }
 
 .mediateca{
-	border-left: 8px solid #fecd46;
+	border-left: 10px solid #fecd46;
 	padding-left: 15px;
 }
 
