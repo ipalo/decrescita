@@ -94,6 +94,11 @@ body {
 	background-color: #a01d21;
 }
 
+#tags .list-inline{
+	margin-left: 0;
+	padding: 10px 0;
+}
+
 .label-categoria{
 	background-color: #fcb421;
 }
