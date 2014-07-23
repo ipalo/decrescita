@@ -69,3 +69,15 @@ p{
 .author span{
 	font-weight: bold;
 }
+
+.video a{
+	color: #000;
+	text-decoration: none;
+}
+
+#box-venezia h2,
+#pubblicazioni-home h2{
+	font-size: 28px;
+}
+
+

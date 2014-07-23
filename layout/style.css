@@ -114,6 +114,10 @@ body {
 	margin-bottom: 15px;
 }
 
+.video .media-body{
+	margin: 15px 0;
+}
+
 .mediateca{
 	border-left: 10px solid #fecd46;
 	padding-left: 15px;
@@ -124,6 +128,23 @@ body {
 #pubblicazioni-home,
 #in-evidenza-home{
 	background-color: #cdc8bf;
+	margin-bottom: 20px;
+}
+
+#box-venezia{
+	background:#cdc8bf url(img/venezia-12.png) center top no-repeat;
+	height: 220px;
+}
+
+
+#box-venezia h2,
+#pubblicazioni-home h2{
+	margin-top: 170px;
+}
+
+#box-venezia mark,
+#pubblicazioni-home mark{
+	background-color: #fff;
 }
 
 #eventi-home ul{
@@ -131,8 +152,12 @@ body {
 	padding: 0;
 }
 
+#pubblicazioni-home{
+	background:#cdc8bf url(img/decrescita-pubblicazione.png) center top no-repeat;
+	height: 220px;
+}
+
 #ultime-notizie-home ul{
-	margin: :0;
 	padding-left: 15px;
 }
 
