@@ -147,6 +147,11 @@ body {
 	background-color: #fff;
 }
 
+#eventi-home,
+#in-evidenza-home{
+	padding-top: 10px;
+}
+
 #eventi-home ul{
 	margin: 0;
 	padding: 0;
@@ -157,8 +162,12 @@ body {
 	height: 220px;
 }
 
+#ultime-notizie-home{
+	padding: 0;
+}
+
 #ultime-notizie-home ul{
-	padding-left: 15px;
+	padding-left: 12px;
 }
 
 footer{
