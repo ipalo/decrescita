@@ -58,7 +58,7 @@ body {
 }
 
 #secondary-menu ul li{
-	padding: 0px 5px;
+	padding: 0px 8px;
 	border-right: 2px solid #000;
 }
 
@@ -67,7 +67,7 @@ body {
 }
 
 #secondary-menu ul li a{
-    padding: 0 15px;
+    padding: 0 5px;
     text-decoration: none;
 
 }
@@ -87,6 +87,7 @@ body {
 
 #tags a.label{
 	background-color: #fff;
+	padding:0 5px;
 }
 
 #tags a.label:hover,
@@ -99,12 +100,18 @@ body {
 	padding: 10px 0;
 }
 
+#sponsored{
+	margin-bottom: 20px;
+}
+
 .label-categoria{
 	background-color: #fcb421;
+	padding: 0 5px;
 }
 
 .video{
 	background-color: #cdc8bf;
+	margin-bottom: 15px;
 }
 
 .mediateca{
