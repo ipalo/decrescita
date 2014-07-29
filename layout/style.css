@@ -102,6 +102,20 @@ body {
 
 #sponsored{
 	margin-bottom: 20px;
+	position:relative;
+}
+
+#sponsored .description{
+	position:absolute; /* absolute position (so we can position it where we want)*/  
+    bottom:20px; /* position will be on bottom */  
+    left:15px;  
+    width: 250px; 
+    padding: 10px;
+    background-color: #FFDB66; 
+}
+
+#sponsored .description .label{
+	padding-left: 0;
 }
 
 .label-categoria{
