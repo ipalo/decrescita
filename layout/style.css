@@ -186,9 +186,33 @@ body {
 	padding-left: 10px;
 }
 
-
 footer{
 	background-color: #ecedec;
+}
+
+footer .form-control {
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    color: transparent;
+    height: 20px;
+    border-bottom: 2px solid #999;
+}
+
+footer .input-group-sm > .form-control,
+footer .input-group-sm > .input-group-addon,
+footer .input-group-sm > .input-group-btn > .btn {
+    border-radius: 0px;
+    height: 24px;
+}
+
+footer button{
+	margin-top: 15px;
+	border: none;
+	background-color: transparent;
+	padding-left: 0px;
 }
 
 /*scaffolding*/
