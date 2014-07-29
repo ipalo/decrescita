@@ -170,6 +170,23 @@ body {
 	padding-left: 12px;
 }
 
+
+#glossario a,
+#persone a{
+	cursor: pointer;
+	border-bottom: 3px solid #FCB421;
+}
+
+#link > ul{
+	margin: 0px;
+	padding-left: 0px;
+}
+
+#link ul li > ul{
+	padding-left: 10px;
+}
+
+
 footer{
 	background-color: #ecedec;
 }

@@ -108,4 +108,27 @@ p{
 	text-transform: uppercase;
 }
 
+#link ul li a{
+	color: #000;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 110%;
+}
+
+#link li > ul li a{
+	font-weight: normal;
+	font-size: 100%;
+}
+
+#glossario a{
+	font-weight: bold;
+}
+
+#glossario a,
+#persone a{
+	color: #000;
+	font-size: 130%;
+	text-decoration: none;
+}
+
 
