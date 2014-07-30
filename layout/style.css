@@ -6,6 +6,7 @@ body {
 
 #page-container {
 	background-color: #fff;
+	z-index: 10;
 }
 
 .navbar{
@@ -21,6 +22,11 @@ body {
 #primary-menu{
 	height: 70px;
 	padding: 10px 20px;
+}
+
+#primary-menu .navbar-nav > li > a {
+    padding-bottom: 0;
+    padding-top: 30px;
 }
 
 #page-container{
@@ -106,8 +112,8 @@ body {
 }
 
 #sponsored .description{
-	position:absolute; /* absolute position (so we can position it where we want)*/  
-    bottom:20px; /* position will be on bottom */  
+	position:absolute; 
+    bottom:20px;   
     left:15px;  
     width: 250px; 
     padding: 10px;
@@ -247,12 +253,15 @@ footer button{
 */
 
 /*TODO: fix position on resizing window at @mediaquery px limit dimensions*/
+
+
 #tools-menu .right {
 	float: right;
 }
 
 #tools-menu ul {
 	width:60px;
+	z-index: -2;
 }
 #tools-menu li {
 	width:60px;
