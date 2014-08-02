@@ -149,6 +149,7 @@ body {
 #in-evidenza-home{
 	background-color: #cdc8bf;
 	margin-bottom: 20px;
+	padding: 10px 15px;
 }
 
 #box-venezia{
@@ -159,7 +160,7 @@ body {
 
 #box-venezia h2,
 #pubblicazioni-home h2{
-	margin-top: 170px;
+	padding-top: 135px;
 }
 
 #box-venezia mark,
@@ -167,10 +168,6 @@ body {
 	background-color: #fff;
 }
 
-#eventi-home,
-#in-evidenza-home{
-	padding-top: 10px;
-}
 
 #eventi-home ul{
 	margin: 0;
