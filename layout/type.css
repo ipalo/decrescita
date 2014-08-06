@@ -8,6 +8,10 @@ p{
 	font-size: 110%;
 }
 
+#primary-menu .navbar-nav > li > a {
+    color: #000;
+}
+
 #secondary-menu a:hover,
 #secondary-menu a:active{
 	color: #fff;

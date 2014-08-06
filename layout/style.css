@@ -6,6 +6,7 @@ body {
 
 #page-container {
 	background-color: #fff;
+	z-index: 10;
 }
 
 .navbar{
@@ -21,6 +22,11 @@ body {
 #primary-menu{
 	height: 70px;
 	padding: 10px 20px;
+}
+
+#primary-menu .navbar-nav > li > a {
+    padding-bottom: 0;
+    padding-top: 30px;
 }
 
 #page-container{
@@ -106,8 +112,8 @@ body {
 }
 
 #sponsored .description{
-	position:absolute; /* absolute position (so we can position it where we want)*/  
-    bottom:20px; /* position will be on bottom */  
+	position:absolute; 
+    bottom:20px;   
     left:15px;  
     width: 250px; 
     padding: 10px;
@@ -143,6 +149,7 @@ body {
 #in-evidenza-home{
 	background-color: #cdc8bf;
 	margin-bottom: 20px;
+	padding: 10px 15px;
 }
 
 #box-venezia{
@@ -153,7 +160,7 @@ body {
 
 #box-venezia h2,
 #pubblicazioni-home h2{
-	margin-top: 170px;
+	padding-top: 135px;
 }
 
 #box-venezia mark,
@@ -161,10 +168,6 @@ body {
 	background-color: #fff;
 }
 
-#eventi-home,
-#in-evidenza-home{
-	padding-top: 10px;
-}
 
 #eventi-home ul{
 	margin: 0;
@@ -202,6 +205,7 @@ body {
 
 footer{
 	background-color: #ecedec;
+	padding: 15px 0;
 }
 
 footer .form-control {
@@ -247,12 +251,15 @@ footer button{
 */
 
 /*TODO: fix position on resizing window at @mediaquery px limit dimensions*/
+
+
 #tools-menu .right {
 	float: right;
 }
 
 #tools-menu ul {
-	width:40px;
+	width:60px;
+	z-index: -2;
 }
 #tools-menu li {
 	margin-bottom:0;
