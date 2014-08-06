@@ -252,18 +252,26 @@ footer button{
 }
 
 #tools-menu ul {
-	width:60px;
+	width:40px;
 }
 #tools-menu li {
-	width:60px;
-	height:60px;
 	margin-bottom:0;
+	text-align: center;
 }
 #tools-menu li a {
-	width:60px;
-	height:60px;
+	width:40px;
+	height:40px;
 	background-color: #ffcf22;
 	margin:0;
-	padding:15px;
+	padding:0;
+	white-space: nowrap;
+}
+#tools-menu li a .valign {
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+#tools-menu li a img {
+	vertical-align: middle;
 }
 
