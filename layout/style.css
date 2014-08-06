@@ -206,6 +206,7 @@ body {
 footer{
 	background-color: #ecedec;
 	padding: 15px 0;
+	clear: both;
 }
 
 footer .form-control {
@@ -231,6 +232,23 @@ footer button{
 	border: none;
 	background-color: transparent;
 	padding-left: 0px;
+}
+
+/*inner pages*/
+#author-box{
+	background-color: #d9d4cb;
+	padding: 15px;
+	margin: 15px 0px;
+}
+
+#author-box img{
+	width: 80px;
+	height: auto;
+}
+
+#author-box .description{
+	float: right;
+    width: 85%;
 }
 
 /*scaffolding*/
