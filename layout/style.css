@@ -266,19 +266,28 @@ footer button{
 
 /*inner pages*/
 #author-box{
-	background-color: #d9d4cb;
-	padding: 15px;
-	margin: 15px 0px;
+	padding: 10px 0;
 }
 
 #author-box img{
-	width: 80px;
+	width: 40px;
 	height: auto;
+	float: left;
+	margin-right: 10px;
 }
 
-#author-box .description{
+#author-box .author{
 	float: right;
     width: 85%;
+    float: left;
+}
+
+.author{
+	padding: 10px 0;
+}
+
+#inner-page img{ 
+	clear: both;
 }
 
 /*scaffolding*/
@@ -326,4 +335,16 @@ footer button{
 }
 #tools-menu li a img {
 	width:20px;
+}
+
+/*media queries*/
+
+@media screen and (max-width: 1024px) {
+    
+}
+
+@media screen and (max-width: 768px) {
+    
+}
+
 }
