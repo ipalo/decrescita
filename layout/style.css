@@ -244,6 +244,12 @@ footer .form-control {
     border-bottom: 2px solid #999;
 }
 
+footer .form-control:focus{
+	border-color: transparent;
+	box-shadow: none;
+	border-bottom: 2px solid #999;
+}
+
 footer .input-group-sm > .form-control,
 footer .input-group-sm > .input-group-addon,
 footer .input-group-sm > .input-group-btn > .btn {
