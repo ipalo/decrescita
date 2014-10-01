@@ -293,6 +293,10 @@ footer button{
 	clear: both;
 }
 
+#related ul{
+	border-top: 2px solid #e3e3e3;
+}
+
 /*scaffolding*/
 
 .placeholder{

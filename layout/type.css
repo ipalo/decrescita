@@ -154,6 +154,10 @@ p{
 	text-decoration: none;
 }
 
+#inner-page-full p{
+	font-size: 20px;
+}
+
 footer form{
 	font-family: Georgia,Serif;
 }
