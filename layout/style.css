@@ -293,7 +293,15 @@ footer button{
 	clear: both;
 }
 
-#related ul{
+#related{
+	margin-bottom: 20px;
+}
+
+#related img{
+	margin-bottom: 10px;
+}
+
+#related > div{
 	border-top: 2px solid #e3e3e3;
 }
 
