@@ -113,7 +113,7 @@ body {
 
 #tags{
 	background-color: #EBEBE7;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 }
 
 #tags a.label{
@@ -132,7 +132,7 @@ body {
 }
 
 #sponsored{
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 	position:relative;
 }
 
