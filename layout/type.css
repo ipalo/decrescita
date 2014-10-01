@@ -88,6 +88,15 @@ p{
 	font-weight: normal;
 }
 
+#sponsored h4 a {
+    color: #000;
+    text-decoration: none;
+}
+
+#sponsored h4 a:hover, #sponsored h4 a:visited, #sponsored h4 a:active{
+    background-color: #fff;
+}
+
 #box-venezia h2,
 #pubblicazioni-home h2{
 	font-size: 27px;
@@ -153,4 +162,16 @@ footer button{
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 110%;
+}
+
+footer a {
+    color: #000;
+    font-family: Georgia,serif;
+    font-size: 90%;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+footer a:hover, footer a:visited, footer a:active{
+	color: #000;
 }

@@ -258,10 +258,13 @@ footer .input-group-sm > .input-group-btn > .btn {
 }
 
 footer button{
-	margin-top: 15px;
 	border: none;
 	background-color: transparent;
 	padding-left: 0px;
+}
+
+#closure {
+    margin-top: 5px;
 }
 
 /*inner pages*/
