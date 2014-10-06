@@ -305,6 +305,12 @@ footer button{
 	border-top: 2px solid #e3e3e3;
 }
 
+#main-image img{
+	margin-bottom: 15px;
+	width: 100%;
+	height: auto;
+}
+
 /*scaffolding*/
 
 .placeholder{
