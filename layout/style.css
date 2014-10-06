@@ -295,6 +295,7 @@ footer button{
 
 #related{
 	margin-bottom: 20px;
+	padding-top: 20px;
 }
 
 #related img{
@@ -303,6 +304,10 @@ footer button{
 
 #related > div{
 	border-top: 2px solid #e3e3e3;
+}
+
+#related div > div{
+	padding-left: 0;
 }
 
 #main-image img{
