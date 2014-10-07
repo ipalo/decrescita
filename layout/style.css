@@ -316,6 +316,24 @@ footer button{
 	height: auto;
 }
 
+#list-articles{
+	margin-bottom: 15px;
+	position: relative;
+}
+
+#list-articles .description {
+    background-color: #ffdb66;
+    top: 100px;
+    left: 15px;
+    padding: 10px;
+    position: absolute;
+    width: 250px;
+}
+
+#list-articles.description .label{
+	padding-left: 0;
+}
+
 /*scaffolding*/
 
 .placeholder{

@@ -171,6 +171,24 @@ p{
 	color: #000;
 }
 
+#list-articles .description h4{
+	font-weight: bold;
+}
+
+#list-articles .description .label{
+	color: #000;
+	font-weight: normal;
+}
+
+#list-articles h4 a {
+    color: #000;
+    text-decoration: none;
+}
+
+#list-articles h4 a:hover, #list-articles h4 a:visited, #list-articles h4 a:active{
+    background-color: #fff;
+}
+
 footer form{
 	font-family: Georgia,Serif;
 }
