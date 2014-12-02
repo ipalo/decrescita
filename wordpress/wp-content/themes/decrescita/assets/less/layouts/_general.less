@@ -1,0 +1,387 @@
+// Content wrapper
+.wrap { }
+
+// Main content area
+.main {
+  .make-sm-column(@main-sm-columns);
+  .sidebar-primary & {
+    .make-sm-column(@main-sm-columns - @sidebar-sm-columns);
+  }
+}
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  /*padding-top: 50px;*/
+  padding-bottom: 20px;
+}
+
+.wrap.container {
+	background-color: #fff;
+	z-index: 10;
+	position: relative;
+}
+
+.navbar{
+	margin-bottom: 0px;
+}
+
+.navbar-brand, .navbar-brand:active {
+	background: url(../img/logo-decrescita.png) left top no-repeat;
+	width: 277px;
+	height: 50px;
+	position: relative;
+	padding:0;
+	outline: none;
+}
+
+.navbar-brand #definizione-decrescita {
+	-moz-osx-font-smoothing: grayscale;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    position: absolute;
+	bottom:-10px;
+    width:100%;
+	height:10px;
+	display: none;
+	background-color: transparent;
+	color: #000;
+	font-size: 10px;
+	text-align: center;
+	visibility: hidden;
+}
+.navbar-brand:hover #definizione-decrescita {
+	display: block;
+	visibility: visible;
+}
+
+#primary-menu{
+	height: 70px;
+	padding: 10px 20px;
+}
+
+#primary-menu .navbar-nav > li > a {
+	text-transform: uppercase;
+    padding-bottom: 0;
+    padding-top: 30px;
+}
+
+#definition{
+	min-height: 245px;
+	background: url(../img/decrescita-illustrazione-menu.png) center bottom no-repeat;
+	background-color: #E5E3E2;
+}
+
+#definition h2{
+	padding-left: 10px;
+}
+
+#definition h2 span a{
+	border-bottom: 3px solid #a01d21;
+}
+
+#definition h2 span a:hover,
+#definition h2 span a:active{
+	text-decoration: none;
+}
+
+#secondary-menu{
+	background-color: #d8d8d1;
+	padding: 5px 0;
+}
+
+#secondary-menu ul{
+	margin-top: 10px;
+}
+
+#secondary-menu ul li{
+	padding: 0px 8px;
+	border-right: 2px solid #000;
+}
+
+#secondary-menu ul > li:last-child {
+	 border-right: none;
+}
+
+#secondary-menu ul li a{
+    padding: 0 5px;
+    text-decoration: none;
+
+}
+
+#secondary-menu a:hover,
+#secondary-menu a:active{
+	background-color: #fcb421;   
+    -webkit-border-radius: 6px;  
+    -moz-border-radius: 6px;  
+    border-radius: 6px; 
+}
+
+#tags{
+	background-color: #EBEBE7;
+	margin-bottom: 15px;
+}
+
+#tags a.label{
+	background-color: #fff;
+	padding:0 5px;
+}
+
+#tags a.label:hover,
+#tags a.label:active{
+	background-color: #a01d21;
+}
+
+#tags .list-inline{
+	margin-left: 0;
+	padding: 10px 0;
+}
+
+#sponsored{
+	margin-bottom: 15px;
+	position:relative;
+}
+
+#sponsored .description{
+	position:absolute; 
+    bottom:20px;   
+    left:15px;  
+    width: 250px; 
+    padding: 10px;
+    background-color: #FFDB66; 
+}
+
+#sponsored .description .label{
+	padding-left: 0;
+}
+
+.label-categoria{
+	background-color: #fcb421;
+	padding: 0 5px;
+}
+
+.video{
+	background-color: #cdc8bf;
+	margin-bottom: 15px;
+}
+
+.video .media-body{
+	margin: 15px 0;
+}
+
+.mediateca{
+	border-left: 10px solid #fecd46;
+	padding-left: 15px;
+}
+
+#box-venezia,
+#eventi-home,
+#pubblicazioni-home,
+#in-evidenza-home{
+	background-color: #cdc8bf;
+	margin-bottom: 20px;
+	padding: 10px 15px;
+}
+
+#box-venezia{
+	background:#cdc8bf url(../img/venezia-12.png) center top no-repeat;
+	height: 220px;
+}
+
+
+#box-venezia h2,
+#pubblicazioni-home h2{
+	padding-top: 135px;
+}
+
+#box-venezia mark,
+#pubblicazioni-home mark{
+	background-color: #fff;
+}
+
+
+#eventi-home ul{
+	margin: 0;
+	padding: 0;
+}
+
+#pubblicazioni-home{
+	background:#cdc8bf url(../img/decrescita-pubblicazione.png) center top no-repeat;
+	height: 220px;
+}
+
+#ultime-notizie-home{
+	padding: 0;
+}
+
+#ultime-notizie-home ul{
+	padding-left: 12px;
+}
+
+
+#glossario a,
+#persone a{
+	cursor: pointer;
+	border-bottom: 3px solid #FCB421;
+}
+
+#link > ul{
+	margin: 0px;
+	padding-left: 0px;
+}
+
+#link ul li > ul{
+	padding-left: 10px;
+}
+
+footer{
+	background-color: #ecedec;
+	padding: 15px 0;
+	clear: both;
+}
+
+footer .form-control {
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    height: 20px;
+    border-bottom: 2px solid #999;
+}
+
+footer .form-control:focus{
+	border-color: transparent;
+	box-shadow: none;
+	border-bottom: 2px solid #999;
+}
+
+footer .input-group-sm > .form-control,
+footer .input-group-sm > .input-group-addon,
+footer .input-group-sm > .input-group-btn > .btn {
+    border-radius: 0px;
+    height: 24px;
+}
+
+footer button{
+	border: none;
+	background-color: transparent;
+	padding-left: 0px;
+}
+
+#closure {
+    margin-top: 5px;
+}
+
+/*inner pages*/
+#author-box{
+	padding: 10px 0;
+}
+
+#author-box img{
+	width: 40px;
+	height: auto;
+	float: left;
+	margin-right: 10px;
+}
+
+#author-box .author{
+	float: right;
+    width: 85%;
+    float: left;
+}
+
+.author{
+	padding: 10px 0;
+}
+
+#inner-page img{ 
+	clear: both;
+}
+
+#related{
+	margin-bottom: 20px;
+	padding-top: 20px;
+}
+
+#related img{
+	margin-bottom: 10px;
+}
+
+#related > div{
+	border-top: 2px solid #e3e3e3;
+}
+
+#related div > div{
+	padding-left: 0;
+}
+
+#main-image img{
+	margin-bottom: 15px;
+	width: 100%;
+	height: auto;
+}
+
+#list-articles{
+	margin-bottom: 15px;
+	position: relative;
+}
+
+#list-articles .description {
+    background-color: #ffdb66;
+    top: 100px;
+    left: 15px;
+    padding: 10px;
+    position: absolute;
+    width: 250px;
+}
+
+#list-articles.description .label{
+	padding-left: 0;
+}
+
+/**
+* menu tools
+*/
+
+/*TODO: fix position on resizing window at @mediaquery px limit dimensions*/
+
+
+#tools-menu .right {
+	float: right;
+}
+#tools-menu ul {
+	z-index: -2;
+}
+#tools-menu li {
+	margin-bottom:0;
+	text-align: center;
+}
+#tools-menu li a {
+	width:40px;
+	height:40px;
+	background-color: #ffcf22;
+	margin:0;
+	padding:0;
+	white-space: nowrap;
+}
+#tools-menu li a .valign {
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+#tools-menu li a img {
+	width:20px;
+}
+
+/*media queries*/
+
+@media screen and (max-width: 1024px) {
+    
+}
+
+@media screen and (max-width: 768px) {
+    
+}
