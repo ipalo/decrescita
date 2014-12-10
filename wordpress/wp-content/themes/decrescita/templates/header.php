@@ -44,14 +44,7 @@
   </div>
   <div id="secondary-menu-collapse" class="navbar-collapse collapse">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#" class="label">EVENTI</a></li>
-      <li><a href="#">CONFERENZE</a></li>
-      <li><a href="#">ARTICOLI</a></li>
-      <li><a href="#">FOTOSTORIE</a></li>
-      <li><a href="#">VIDEO</a></li>
-      <li><a href="#">PUBBLICAZIONI</a></li>
-      <li><a href="#">GRUPPI DI LAVORO</a></li>
-      <li><a href="#">MEDIATECA</a></li>
+      <?php wp_list_categories(array('title_li' => '')); ?>
     </ul>
   </div>
 </div>
@@ -59,10 +52,7 @@
     <div class="col-md-12">
       <ul class="list-unstyled list-inline">
         <li><h4>TEMI:</h4></li>
-        <li><a href="#" class="label">bene comune</a></li>
-        <li><a href="#" class="label">ben vivere</a></li>
-        <li><a href="#" class="label">buone pratiche</a></li>
-        <li><a href="#" class="label">democrazia</a></li>
+        <?php wp_list_categories(array('title_li' => '', 'taxonomy' => 'temi_contenuto')); ?>
       </ul>
     </div>
 </div>
