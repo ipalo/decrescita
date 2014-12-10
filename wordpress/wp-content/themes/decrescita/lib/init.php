@@ -37,7 +37,7 @@ add_action('after_setup_theme', 'roots_setup');
  */
 function roots_widgets_init() {
   register_sidebar(array(
-    'name'          => __('Primary', 'decrescita'),
+    'name'          => __('Sidebar', 'decrescita'),
     'id'            => 'sidebar-primary',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
@@ -46,7 +46,16 @@ function roots_widgets_init() {
   ));
 
   register_sidebar(array(
-    'name'          => __('Footer', 'decrescita'),
+    'name'          => __('Testo Footer', 'decrescita'),
+    'id'            => 'text-footer',
+    'before_widget' => '<div class="col-md-6"><section class="widget %1$s %2$s">',
+    'after_widget'  => '</section></div>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>',
+  ));
+
+  register_sidebar(array(
+    'name'          => __('Widget Footer', 'decrescita'),
     'id'            => 'sidebar-footer',
     'before_widget' => '<div class="col-md-3"><section class="widget %1$s %2$s">',
     'after_widget'  => '</section></div>',

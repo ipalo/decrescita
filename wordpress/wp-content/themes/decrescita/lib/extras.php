@@ -62,37 +62,36 @@ function post_type_persone() {
 
 add_action( 'init', 'post_type_persone', 0 );
 
-function tipo_taxonomy() {
+function temi_taxonomy() {
 
 	$labels = array(
-		'name'                       => _x( 'Tipi di contenuto', 'Taxonomy General Name', 'decrescita' ),
-		'singular_name'              => _x( 'Tipo di contenuto', 'Taxonomy Singular Name', 'decrescita' ),
-		'menu_name'                  => __( 'Tipo di contenuto', 'decrescita' ),
-		'all_items'                  => __( 'Tutti i tipi', 'decrescita' ),
+		'name'                       => _x( 'Temi', 'Taxonomy General Name', 'decrescita' ),
+		'singular_name'              => _x( 'Tema', 'Taxonomy Singular Name', 'decrescita' ),
+		'menu_name'                  => __( 'Temi', 'decrescita' ),
+		'all_items'                  => __( 'Tutti i temi', 'decrescita' ),
 		'parent_item'                => __( 'Parent Item', 'decrescita' ),
 		'parent_item_colon'          => __( 'Parent Item:', 'decrescita' ),
-		'new_item_name'              => __( 'Nuovo tipo', 'decrescita' ),
-		'add_new_item'               => __( 'Aggiungi tipo', 'decrescita' ),
-		'edit_item'                  => __( 'Modifica tipo', 'decrescita' ),
-		'update_item'                => __( 'Aggiorna tipo', 'decrescita' ),
-		'separate_items_with_commas' => __( 'Tipi separati da virgola', 'decrescita' ),
-		'search_items'               => __( 'Cerca tipi', 'decrescita' ),
-		'add_or_remove_items'        => __( 'Aggiungi o elimina tipi', 'decrescita' ),
+		'new_item_name'              => __( 'Nuovo tema', 'decrescita' ),
+		'add_new_item'               => __( 'Aggiungi tema', 'decrescita' ),
+		'edit_item'                  => __( 'Modifica tema', 'decrescita' ),
+		'update_item'                => __( 'Aggiorna tema', 'decrescita' ),
+		'separate_items_with_commas' => __( 'Temi separati da virgola', 'decrescita' ),
+		'search_items'               => __( 'Cerca temi', 'decrescita' ),
+		'add_or_remove_items'        => __( 'Aggiungi o elimina temi', 'decrescita' ),
 		'choose_from_most_used'      => __( 'Scegli tra i più utilizzati', 'decrescita' ),
 		'not_found'                  => __( 'Non trovato', 'decrescita' ),
 	);
 	$args = array(
 		'labels'                     => $labels,
-		'hierarchical'               => false,
+		'hierarchical'               => true,
 		'public'                     => true,
 		'show_ui'                    => true,
 		'show_admin_column'          => true,
-		'show_in_nav_menus'          => true,
-		'show_tagcloud'              => true,
+		'show_in_nav_menus'          => true
 	);
-	register_taxonomy( 'tipo_contenuto', array( 'post' ), $args );
+	register_taxonomy( 'temi_contenuto', array( 'post' ), $args );
 
 }
 
 // Hook into the 'init' action
-add_action( 'init', 'tipo_taxonomy', 0 );
+add_action( 'init', 'temi_taxonomy', 0 );
