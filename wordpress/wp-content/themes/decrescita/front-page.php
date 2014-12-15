@@ -1,5 +1,5 @@
 <div class="page-header">
-  <div class="row" id="sponsored">
+	<div class="row" id="sponsored">
         <div class="col-md-8">
             <div class="description">
               <a class="label" href="#">ARTICOLI</a>
@@ -20,7 +20,7 @@
             </div>
             <img src="http://placehold.it/360x350">
         </div>
-      </div>
+    </div>
 </div>
 
 <div class="row" class="articles">
