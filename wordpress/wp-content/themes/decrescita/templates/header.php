@@ -52,7 +52,7 @@
     <div class="col-md-12">
       <ul class="list-unstyled list-inline">
         <li><h4>TEMI:</h4></li>
-        <?php wp_list_categories(array('title_li' => '', 'taxonomy' => 'temi_contenuto')); ?>
+        <?php wp_list_categories(array('title_li' => '', 'taxonomy' => 'temi')); ?>
       </ul>
     </div>
 </div>
