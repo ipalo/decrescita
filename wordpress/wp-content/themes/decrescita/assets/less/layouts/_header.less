@@ -1,37 +1,63 @@
 .banner { }
 
+/* Menù principale */
+#primary-menu{
+	height: 70px;
+	padding: 10px 20px;
+}
+
 #primary-menu .navbar-nav > li > a {
-    color: #000;
-}
-
-#secondary-menu a:hover,
-#secondary-menu a:active{
-	color: #fff;
-}
-
-#tags{
-	font-family: Georgia,Serif;
-}
-
-#tags h4{
-	font-size: 100%;
-	font-weight: bold;
-}
-
-#tags a.label{
 	color: #000;
-	font-size: 130%;
-    font-weight: normal;
+	text-transform: uppercase;
+    padding-bottom: 0;
+    padding-top: 30px;
 }
 
-#tags a.label:hover,
-#tags a.label:active{
-	color: #fff;
+.navbar-brand, .navbar-brand:active {
+	background: url(../img/logo-decrescita.png) left top no-repeat;
+	width: 277px;
+	height: 50px;
+	position: relative;
+	padding:0;
+	outline: none;
+}
+
+.navbar-brand #definizione-decrescita {
+	-moz-osx-font-smoothing: grayscale;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    position: absolute;
+	bottom:-10px;
+    width:100%;
+	height:10px;
+	display: none;
+	background-color: transparent;
+	color: #000;
+	font-size: 10px;
+	text-align: center;
+	visibility: hidden;
+}
+
+.navbar-brand:hover #definizione-decrescita {
+	display: block;
+	visibility: visible;
+}
+
+/* Definizione */
+
+#definition{
+	min-height: 245px;
+	background: url(../img/decrescita-illustrazione-menu.png) center bottom no-repeat;
+	background-color: #E5E3E2;
 }
 
 #definition h2{
 	color: #a01d21;
 	font-weight: bold;
+	padding-left: 10px;
 }
 
 #definition h2 span{
@@ -42,16 +68,94 @@
 
 #definition h2 span a{
 	color: #000;
+	border-bottom: 3px solid #a01d21;
 }
 
-#secondary-menu ul li a{
-	font-size: 120%;
+#definition h2 span a:hover,
+#definition h2 span a:active{
+	text-decoration: none;
+}
+
+/* Menù categorie */
+#menu-categorie{
+	background-color: #d8d8d1;
+	padding: 5px 0;
+}
+
+#menu-categorie ul{
+	margin-top: 10px;
+}
+
+#menu-categorie ul li{
+	border-right: 2px solid #000;
+}
+
+#menu-categorie ul > li:last-child {
+	border-right: none;
+}
+
+#menu-categorie ul li a{
+    padding: 0 5px;
+    text-decoration: none;
+    font-size: 120%;
 	font-weight: bold;
 	color: #000;
-
+	text-transform: uppercase;
 }
 
-.label-categoria{
+#menu-categorie a:hover,
+#menu-categorie a:active{
+	background-color: #fcb421;   
+    -webkit-border-radius: 6px;  
+    -moz-border-radius: 6px;  
+    border-radius: 6px; 
+    color: #fff;
+}
+
+/* Menù temi */
+#menu-temi{
+	font-family: Georgia,Serif;
+	background-color: #EBEBE7;
+	margin-bottom: 15px;
+}
+
+#menu-temi ul{
+	padding: 15px 0px;
+}
+
+#menu-temi h4{
+	font-size: 100%;
+	font-weight: bold;
+	padding: 5px 15px 0;
+}
+
+#menu-temi ul li a{
+	color: #000;
+	font-size: 130%;
+    font-weight: normal;
+    background-color: #fff;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;  
+    -moz-border-radius: 6px; 
+	margin-right: 10px;
+	padding: 0px 5px;
+}
+
+#menu-temi ul li a:hover,
+#menu-temi ul li a:active{
+	color: #fff;
+	background-color: #a01d21;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;  
+    -moz-border-radius: 6px; 
+}
+
+#menu-temi .list-inline{
+	/*margin-left: 0;*/
+	/*padding: 10px 0;*/
+}
+
+/*.label-categoria{
 	font-size: 90%;
 	font-weight: normal;
-}
+}*/

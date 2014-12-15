@@ -100,5 +100,3 @@
 		<?php endwhile; ?>
 	</div>
 </div>
-
-
