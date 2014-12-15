@@ -37,6 +37,15 @@ add_action('after_setup_theme', 'roots_setup');
  */
 function roots_widgets_init() {
   register_sidebar(array(
+    'name'          => __('Sidebar home', 'decrescita'),
+    'id'            => 'sidebar-primary',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>',
+  ));
+
+  register_sidebar(array(
     'name'          => __('Sidebar', 'decrescita'),
     'id'            => 'sidebar-primary',
     'before_widget' => '<section class="widget %1$s %2$s">',
