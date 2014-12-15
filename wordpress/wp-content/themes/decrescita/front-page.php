@@ -1,5 +1,5 @@
 <div class="page-header">
-  <div class="row" id="sponsored">
+	<div class="row" id="sponsored">
         <div class="col-md-8">
             <div class="description">
               <a class="label" href="#">ARTICOLI</a>
@@ -20,7 +20,7 @@
             </div>
             <img src="http://placehold.it/360x350">
         </div>
-      </div>
+    </div>
 </div>
 
 <div class="row" class="articles">
@@ -28,13 +28,15 @@
 		<?php while (have_posts()) : the_post(); ?>
 		  <article <?php post_class(); ?>>
 		    <header>
-		    	<?php get_template_part('templates/entry-taxonomies'); ?>
+		    	<?php get_template_part('templates/entry-categories'); ?>
 				<h1 class="entry-title"><?php the_title(); ?></h1>
-		      	<?php get_template_part('templates/entry-meta'); ?>
 		    </header>
 		    <div class="entry-content">
 		      <?php the_content(); ?>
 		    </div>
+		    <footer>
+		    	<?php get_template_part('templates/entry-footer'); ?>
+		    </footer>
 		  </article>
 		<?php endwhile; ?>
 	</div>
