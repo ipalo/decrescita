@@ -58,7 +58,7 @@
 			)
 		)); ?>
 		<?php if($eventi->have_posts()) : ?>
-			<article <?php post_class('eventi-home'); ?>>
+			<article <?php post_class(); ?> id="eventi-home">
 				<h3>I prossimi eventi</h3>
 				<ul class="list-unstyled">
 				<?php while ( $eventi->have_posts() ) : $eventi->the_post(); ?>
