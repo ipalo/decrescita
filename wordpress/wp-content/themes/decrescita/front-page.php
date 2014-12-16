@@ -29,7 +29,7 @@
 			<article <?php post_class(); ?>>
 				<header>
 					<?php get_template_part('templates/entry-categories'); ?>
-					<h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+					<h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 				</header>
 				<div class="entry-content">
 					<?php the_excerpt(); ?>
