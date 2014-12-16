@@ -94,7 +94,7 @@
 		wp_reset_query();
 		wp_reset_postdata(); ?>
 		<article <?php post_class('in-evidenza-home'); ?>>
-			<h3 class="title_over_image">Articolo di esempio con l'immagine</h3>
+			<h4><mark>Articolo di esempio con l'immagine</mark></h4>
 			<img src="http://placehold.it/360x240" />
 		</article>
 	</div>
