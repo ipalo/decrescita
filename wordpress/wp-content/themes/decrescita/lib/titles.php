@@ -30,7 +30,7 @@ function roots_title() {
   } elseif (is_search()) {
     return sprintf(__('Search Results for %s', 'decrescita'), get_search_query());
   } elseif (is_404()) {
-    return __('Not Found', 'decrescita');
+    return __('Ooops! Pagina non trovata (errore 404)', 'decrescita');
   } else {
     return get_the_title();
   }

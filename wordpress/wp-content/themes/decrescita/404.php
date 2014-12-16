@@ -6,8 +6,8 @@
 
 <p><?php _e('Probabilmente il problema è dovuto a:', 'decrescita'); ?></p>
 <ul>
-  <li><?php _e('un errore di digitazione dell\'indirizzo', 'decrescita'); ?></li>
-  <li><?php _e('un link sbagliato o non più valido', 'decrescita'); ?></li>
+  <li><?php _e('un errore di digitazione dell\'indirizzo della pagina', 'decrescita'); ?></li>
+  <li><?php _e('un link non valido', 'decrescita'); ?></li>
 </ul>
 
 <?php get_search_form(); ?>

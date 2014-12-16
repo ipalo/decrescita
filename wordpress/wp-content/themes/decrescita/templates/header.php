@@ -27,12 +27,14 @@
     </ul>
   </div>
 </div>
+<?php if(is_front_page()) : ?>
 <div id="definition" class="row hidden-xs">
     <div class="col-md-12">
         <h2>decrescita <span><em>s. f. </em><a href="">Svolta riflessiva</a> per la ricerca relazionale, personale e collettiva di una <a href="">qualità della vita</a> sganciata dall’ossessione per la crescita e dalla corsa alla produzione, al possesso e al consumo di merci;</span>
         </h2>
     </div>
 </div>
+<?php endif; ?>
 <div id="menu-categorie" class="row navbar navbar-default">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-categorie-collapse">
