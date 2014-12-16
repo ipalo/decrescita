@@ -29,6 +29,11 @@ function roots_setup() {
 
   // Tell the TinyMCE editor to use a custom stylesheet
   add_editor_style('/assets/css/editor-style.css');
+
+  add_image_size( '1170x365', 1170, 365, true );
+  add_image_size( '750x350', 750, 350, true );
+  add_image_size( '360x350', 360, 350, true );
+  add_image_size( '360x200', 360, 200, true );
 }
 add_action('after_setup_theme', 'roots_setup');
 
@@ -74,6 +79,9 @@ function roots_widgets_init() {
 }
 add_action('widgets_init', 'roots_widgets_init');
 
+/**
+* activate custom taxonomies
+*/
 function temi_taxonomy() {
   $labels = array(
     'name'                       => _x( 'Temi', 'Taxonomy General Name', 'decrescita' ),
@@ -135,6 +143,7 @@ function persone_taxonomy() {
 add_action('init', 'persone_taxonomy', 0);
 
 
+define('ACF_LITE', true);
 add_filter('acf/settings/path', 'my_acf_settings_path');
 function my_acf_settings_path( $path ) {
     $path = get_stylesheet_directory() . '/acf/';

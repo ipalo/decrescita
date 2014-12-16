@@ -1,30 +1,25 @@
 <div class="page-header">
 	<div class="row" id="sponsored">
-		<div class="col-md-8">
-			<div class="description">
-				<a class="label" href="#">ARTICOLI</a>
-				<h4>
-					<a href="#">Maschile plurale, riunione nazionale a Roma</a>
-				</h4>
-				<p class="author">di Marco Deriu</p>
+		<?php $sticky = get_option( 'sticky_posts' );
+		$sticky = new WP_Query(array('posts_per_page' => 2, 'post__in'  => $sticky));
+		while ( $sticky->have_posts() ) : $sticky->the_post(); ?>
+			<div class="col-md-<?php echo $sticky->current_post==0 ? 8 : 4 ?>">
+				<div class="description">
+					<?php the_category( ' ' ); ?>
+					<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+					<p class="author">di <?php the_author(); ?></p>
+				</div>
+				<?php the_post_thumbnail($sticky->current_post==0 ? '750x350' : '360x350'); ?>
 			</div>
-			<img src="http://placehold.it/750x350">
-		</div>
-		<div class="col-md-4">
-			<div class="description">
-				<a class="label" href="#">PUBBLICAZIONI</a>
-				<h4>
-					<a href="#">Le vie di fuga dall’annunciata apocalisse, viste da Bonaiuti</a>
-				</h4>
-				<p class="author">di Marco Deriu</p>
-			</div>
-			<img src="http://placehold.it/360x350">
-		</div>
+		<?php endwhile;
+		wp_reset_query(); ?>
 	</div>
 </div>
 
 <div class="row" class="articles">
 
+	<?php global $query_string; query_posts($query_string.'&ignore_sticky_posts=1'); ?>
+	
 	<div class="col-md-6">
 		<?php while (have_posts()) : the_post(); ?>
 			<article <?php post_class(); ?>>
@@ -89,16 +84,17 @@
 		)); ?>
 		<?php while($in_evidenza->have_posts()) : $in_evidenza->the_post(); ?>
 			<article <?php post_class('in-evidenza-home'); ?>>
-				<h4><?php the_title(); ?></h4>
-				<?php the_excerpt(); ?>
+				<?php if(has_post_thumbnail()) : ?>
+					<h4><a href="<?php the_permalink(); ?>"><mark><?php the_title(); ?></mark></a></h4>
+					<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('360x200'); ?></a>
+				<?php else : ?>
+					<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+					<?php the_excerpt(); ?>
+				<?php endif; ?>
 			</article>
 		<?php endwhile;
 		wp_reset_query();
 		wp_reset_postdata(); ?>
-		<article <?php post_class('in-evidenza-home'); ?>>
-			<h4><mark>Articolo di esempio con l'immagine</mark></h4>
-			<img src="http://placehold.it/360x240" />
-		</article>
 	</div>
 
 	<div class="col-md-2">
@@ -108,7 +104,7 @@
 				<h4>Glossario</h4>
 				<?php foreach ($glossario as $tag) : ?>
 					<a href="<?php echo get_tag_link( $tag->term_id ); ?>" title="<?php sprintf( __( 'View all post filed under %s', 'decrescita' ), $tag->name ); ?>"><?php echo $tag->name; ?></a>
-					<p><?php echo $tag->description; ?></p>
+					<p><?php $tag_description = get_extended($tag->description); echo $tag_description['main']; ?></p>
 				<?php endforeach; ?>
 			</div>
 		<?php endif; ?>
@@ -118,7 +114,7 @@
 				<h4>Persone</h4>
 				<?php foreach ($persona as $term ) : ?>
 					<a href="<?php echo get_term_link( $term ); ?>" title="<?php sprintf( __( 'View all post filed under %s', 'decrescita' ), $term->name ); ?>"><?php echo $term->name; ?></a>
-					<p><?php echo $term->description; ?></p>
+					<p><?php $term_description = get_extended($term->description); echo $term_description['main']; ?></p>
 				<?php endforeach; ?>
 			</div>
 		<?php endif; ?>
