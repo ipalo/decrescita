@@ -29,10 +29,10 @@
 			<article <?php post_class(); ?>>
 				<header>
 					<?php get_template_part('templates/entry-categories'); ?>
-					<h1 class="entry-title"><?php the_title(); ?></h1>
+					<h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 				</header>
 				<div class="entry-content">
-					<?php the_content(); ?>
+					<?php the_excerpt(); ?>
 				</div>
 				<footer>
 					<?php get_template_part('templates/entry-footer'); ?>
@@ -40,63 +40,85 @@
 			</article>
 		<?php endwhile; ?>
 	</div>
-	<div class="col-md-4">
-		<div id="box-home">
-			<img src="http://placehold.it/360x240"/>
-			<h2><mark>Venezia 2012</mark></h2>
-		</div>
-		
-		<?php $eventi = new WP_Query( 'category_name=eventi&posts_per_page=2' ); ?>
-		<?php if($eventi) : ?>
-			<div id="eventi-home">
+	<div class="col-md-4">		
+		<?php $eventi = new WP_Query(array(
+			'ignore_sticky_posts' => true,
+			'category_name' => 'eventi',
+			'posts_per_page' => '2',
+			'meta_key' => 'data',
+			'orderby' => 'meta_value',
+			'order' => 'ASC',
+			'meta_query' => array(
+				array(
+					'key' => 'data',
+					'value' => date('Y-m-d'),
+					'compare' => '>=',
+					'type' => 'DATE'
+				)
+			)
+		)); ?>
+		<?php if($eventi->have_posts()) : ?>
+			<article <?php post_class('eventi-home'); ?>>
 				<h3>I prossimi eventi</h3>
 				<ul class="list-unstyled">
 				<?php while ( $eventi->have_posts() ) : $eventi->the_post(); ?>
 					<li>
-						<em>Parma, 12 giugno 2014</em>
+						<em class="time quando"><?php the_field('quando'); ?></em>
 						<h4><a href="<?php the_permalink();?>"><?php the_title();?></a></h4>
-						<p>In una terra lontana, dietro le montagne
-							Parole, lontani dalle terre di Vocalia e
-							Consonantia, vivono i testi casuali.</p>
+						<?php the_excerpt(); ?>
 					</li>
-				<?php endwhile; 
+				<?php endwhile;
+				wp_reset_query();
 				wp_reset_postdata(); ?>
 				</ul>
+			</article>
+		<?php endif; ?>
+
+		<?php $in_evidenza = new WP_Query(array(
+			'ignore_sticky_posts' => true,
+			'posts_per_page' => '3',
+			'meta_query' => array(
+				array(
+					'key' => 'in_evidenza',
+					'value' => 1,
+					'compare' => '='
+				)
+			)
+		)); ?>
+		<?php while ( $in_evidenza->have_posts() ) : $in_evidenza->the_post(); ?>
+			<article <?php post_class('in-evidenza-home'); ?>>
+				<h3><?php the_title(); ?></h3>
+				<?php the_excerpt(); ?>
+			</article>
+		<?php endwhile;
+		wp_reset_query();
+		wp_reset_postdata(); ?>
+		<article <?php post_class('in-evidenza-home'); ?>>
+			<h3>Articolo di esempio con l'immagine</h3>
+			<img src="http://placehold.it/360x240" />
+		</article>
+	</div>
+
+	<div class="col-md-2">
+		<?php $glossario = get_tags('number=1');
+			if(!empty($glossario) && !is_wp_error($glossario)) : ?>
+			<div id="glossario">
+				<h4>Glossario</h4>
+				<?php foreach ($glossario as $tag) : ?>
+					<a href="<?php echo get_tag_link( $tag->term_id ); ?>" title="<?php sprintf( __( 'View all post filed under %s', 'decrescita' ), $tag->name ); ?>"><?php echo $tag->name; ?></a>
+					<p><?php echo $tag->description; ?></p>
+				<?php endforeach; ?>
 			</div>
 		<?php endif; ?>
-		
-		<div id="in-evidenza-home">
-			<h3>elementi in evidenza</h3>
-			<h4>Titolo titolo titolo</h4>
-			<p>In una terra lontana, dietro le montagne
-						Parole, lontani dalle terre di Vocalia e
-						xConsonantia, vivono i testi casuali.</p>
-		</div>
-	</div>
-	<div class="col-md-4">
-		<?php while (have_posts()) : the_post(); ?>
-			<article <?php post_class(); ?>>
-				<header>
-					<?php get_template_part('templates/entry-meta'); ?>
-					<h1 class="entry-title"><?php the_title(); ?></h1>
-				</header>
-				<div class="entry-content">
-					<?php the_content(); ?>
-				</div>
-			</article>
-		<?php endwhile; ?>
-	</div>
-	<div class="col-md-2">
-		<?php while (have_posts()) : the_post(); ?>
-			<article <?php post_class(); ?>>
-				<header>
-					<?php get_template_part('templates/entry-meta'); ?>
-					<h1 class="entry-title"><?php the_title(); ?></h1>
-				</header>
-				<div class="entry-content">
-					<?php the_content(); ?>
-				</div>
-			</article>
-		<?php endwhile; ?>
+		<?php $persona = get_terms('persone', 'number=1');
+			if(!empty($persona) && !is_wp_error($persona)) : ?>
+			<div id="persone">
+				<h4>Persone</h4>
+				<?php foreach ($persona as $term ) : ?>
+					<a href="<?php echo get_term_link( $term ); ?>" title="<?php sprintf( __( 'View all post filed under %s', 'decrescita' ), $term->name ); ?>"><?php echo $term->name; ?></a>
+					<p><?php echo $term->description; ?></p>
+				<?php endforeach; ?>
+			</div>
+		<?php endif; ?>
 	</div>
 </div>
