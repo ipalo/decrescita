@@ -29,7 +29,7 @@
 			<article <?php post_class(); ?>>
 				<header>
 					<?php get_template_part('templates/entry-categories'); ?>
-					<h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+					<h4 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 				</header>
 				<div class="entry-content">
 					<?php the_excerpt(); ?>
@@ -59,7 +59,7 @@
 		)); ?>
 		<?php if($eventi->have_posts()) : ?>
 			<article <?php post_class(); ?> id="eventi-home">
-				<h3>I prossimi eventi</h3>
+				<h4>I prossimi eventi</h4>
 				<ul class="list-unstyled">
 				<?php while ( $eventi->have_posts() ) : $eventi->the_post(); ?>
 					<li>
@@ -85,9 +85,9 @@
 				)
 			)
 		)); ?>
-		<?php while ( $in_evidenza->have_posts() ) : $in_evidenza->the_post(); ?>
+		<?php while($in_evidenza->have_posts()) : $in_evidenza->the_post(); ?>
 			<article <?php post_class('in-evidenza-home'); ?>>
-				<h3><?php the_title(); ?></h3>
+				<h4><?php the_title(); ?></h4>
 				<?php the_excerpt(); ?>
 			</article>
 		<?php endwhile;
