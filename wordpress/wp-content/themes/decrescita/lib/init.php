@@ -149,6 +149,7 @@ add_filter('acf/settings/show_admin', '__return_false');
 include_once( get_stylesheet_directory() . '/acf/acf.php' );
 if(function_exists("register_field_group"))
 {
+  $cat_eventi = get_category_by_slug('eventi'); 
   register_field_group(array (
     'id' => 'acf_data-e-luogo-eventi',
     'title' => 'Data e luogo eventi',
@@ -200,9 +201,9 @@ if(function_exists("register_field_group"))
           'group_no' => 0,
         ),
         array (
-          'param' => 'taxonomy',
+          'param' => 'post_category',
           'operator' => '==',
-          'value' => '3',
+          'value' => $cat_eventi->term_id,
           'order_no' => 1,
           'group_no' => 0,
         ),
