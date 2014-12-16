@@ -24,12 +24,13 @@
 </div>
 
 <div class="row" class="articles">
+
 	<div class="col-md-6">
 		<?php while (have_posts()) : the_post(); ?>
 			<article <?php post_class(); ?>>
 				<header>
 					<?php get_template_part('templates/entry-categories'); ?>
-					<h4 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+					<h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 				</header>
 				<div class="entry-content">
 					<?php the_excerpt(); ?>
@@ -40,6 +41,7 @@
 			</article>
 		<?php endwhile; ?>
 	</div>
+
 	<div class="col-md-4">		
 		<?php $eventi = new WP_Query(array(
 			'ignore_sticky_posts' => true,
