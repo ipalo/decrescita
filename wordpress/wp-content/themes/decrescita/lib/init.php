@@ -134,6 +134,19 @@ function persone_taxonomy() {
 }
 add_action('init', 'persone_taxonomy', 0);
 
+
+add_filter('acf/settings/path', 'my_acf_settings_path');
+function my_acf_settings_path( $path ) {
+    $path = get_stylesheet_directory() . '/acf/';
+    return $path;
+}
+add_filter('acf/settings/dir', 'my_acf_settings_dir'); 
+function my_acf_settings_dir( $dir ) {
+    $dir = get_stylesheet_directory_uri() . '/acf/';
+    return $dir;
+}
+add_filter('acf/settings/show_admin', '__return_false');
+include_once( get_stylesheet_directory() . '/acf/acf.php' );
 if(function_exists("register_field_group"))
 {
   register_field_group(array (
