@@ -30,11 +30,11 @@ function roots_setup() {
   // Tell the TinyMCE editor to use a custom stylesheet
   add_editor_style('/assets/css/editor-style.css');
 
-  add_image_size( '1170x365', 1170, 365, true );
-  add_image_size( '750x350', 750, 350, true );
-  add_image_size( '360x350', 360, 350, true );
-  add_image_size( '360x200', 360, 200, true );
-  add_image_size( '280x180', 280, 180, true );
+  add_image_size('1170x365', 1170, 365, true);
+  add_image_size('750x350', 750, 350, true);
+  add_image_size('360x350', 360, 350, true);
+  add_image_size('360x200', 360, 200, true);
+  add_image_size('280x180', 280, 180, true);
 }
 add_action('after_setup_theme', 'roots_setup');
 
@@ -255,6 +255,49 @@ if(function_exists("register_field_group"))
     'options' => array (
       'position' => 'side',
       'layout' => 'default',
+      'hide_on_screen' => array (
+      ),
+    ),
+    'menu_order' => 0,
+  ));
+  register_field_group(array (
+    'id' => 'acf_note',
+    'title' => 'Note',
+    'fields' => array (
+      array (
+        'key' => 'field_54919dd4126f6',
+        'label' => 'Note',
+        'name' => 'note',
+        'type' => 'wysiwyg',
+        'instructions' => 'Inserisci le note per questo contenuto, appariranno nella sidebar di destra.',
+        'default_value' => '',
+        'toolbar' => 'full',
+        'media_upload' => 'yes',
+      ),
+    ),
+    'location' => array (
+      array (
+        array (
+          'param' => 'post_type',
+          'operator' => '==',
+          'value' => 'post',
+          'order_no' => 0,
+          'group_no' => 0,
+        ),
+      ),
+      array (
+        array (
+          'param' => 'post_type',
+          'operator' => '==',
+          'value' => 'page',
+          'order_no' => 0,
+          'group_no' => 1,
+        ),
+      ),
+    ),
+    'options' => array (
+      'position' => 'normal',
+      'layout' => 'no_box',
       'hide_on_screen' => array (
       ),
     ),
