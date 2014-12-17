@@ -104,7 +104,7 @@
 				<h4>Glossario</h4>
 				<?php foreach ($glossario as $tag) : ?>
 					<a href="<?php echo get_tag_link( $tag->term_id ); ?>" title="<?php sprintf( __( 'View all post filed under %s', 'decrescita' ), $tag->name ); ?>"><?php echo $tag->name; ?></a>
-					<p><?php $tag_description = get_extended($tag->description); echo $tag_description['main']; ?></p>
+					<p><?php $tag_description = get_extended($tag->description); echo do_shortcode($tag_description['main']); ?></p>
 				<?php endforeach; ?>
 			</div>
 		<?php endif; ?>
@@ -114,7 +114,7 @@
 				<h4>Persone</h4>
 				<?php foreach ($persona as $term ) : ?>
 					<a href="<?php echo get_term_link( $term ); ?>" title="<?php sprintf( __( 'View all post filed under %s', 'decrescita' ), $term->name ); ?>"><?php echo $term->name; ?></a>
-					<p><?php $term_description = get_extended($term->description); echo $term_description['main']; ?></p>
+					<p><?php $term_description = get_extended($term->description); echo do_shortcode($term_description['main']); ?></p>
 				<?php endforeach; ?>
 			</div>
 		<?php endif; ?>
