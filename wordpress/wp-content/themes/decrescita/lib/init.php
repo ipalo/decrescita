@@ -34,6 +34,7 @@ function roots_setup() {
   add_image_size( '750x350', 750, 350, true );
   add_image_size( '360x350', 360, 350, true );
   add_image_size( '360x200', 360, 200, true );
+  add_image_size( '280x180', 280, 180, true );
 }
 add_action('after_setup_theme', 'roots_setup');
 
