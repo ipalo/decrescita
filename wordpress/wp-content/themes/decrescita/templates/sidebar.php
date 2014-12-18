@@ -9,18 +9,18 @@
 	<?php $attachments = new Attachments( 'attachments' ); ?>
 	<?php if( $attachments->exist() ) : ?>
 		<div id="allegati">
-		  <h3>Attachments</h3>
-		  <p>Total Attachments: <?php echo $attachments->total(); ?></p>
+		  <h4>Materiali scaricabili</h4>
+		  <p>Totale documenti: <?php echo $attachments->total(); ?></p>
 		  <ul>
 		    <?php while( $attachments->get() ) : ?>
 		      <li>
-		        Subtype: <?php echo $attachments->subtype(); ?><br />
-		        URL: <?php echo $attachments->url(); ?><br />
-		        Image: <?php echo $attachments->image( 'thumbnail' ); ?><br />
-		        Source: <?php echo $attachments->src( 'full' ); ?><br />
-		        Size: <?php echo $attachments->filesize(); ?><br />
-		        Title Field: <?php echo $attachments->field( 'title' ); ?><br />
-		        Caption Field: <?php echo $attachments->field( 'caption' ); ?>
+		        <!--Subtype: <?php //echo $attachments->subtype(); ?><br />-->
+		        <!--URL: <?php //echo $attachments->url(); ?><br />-->
+		        <!--Image: <?php //echo $attachments->image( 'thumbnail' ); ?><br />-->
+		        <!--Source: <?php //echo $attachments->src( 'full' ); ?><br />-->
+		        <!--Title Field:--><span class="glyphicon glyphicon-file" aria-hidden="true"></span><?php echo $attachments->field( 'title' ); ?>
+		        <!--Caption Field: --><?php echo $attachments->field( 'caption' ); ?>
+		        <!--Size: --><?php echo $attachments->filesize(); ?>
 		      </li>
 		    <?php endwhile; ?>
 		  </ul>
