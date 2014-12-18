@@ -4,11 +4,21 @@
 .hentry .entry-content { }
 .hentry footer { }
 
-article footer{
-	background-color: #fff;
-	margin-top: 0px;
-	padding: 0px;
+article header .categories a.label{
+	font-size: 85%;
+	font-weight: bold;
+	font-family: "Cabin","Lucida Grande","Lucida Sans Unicode",Arial,sans-serif;
+	color: #fcb421;
+	text-transform: uppercase;
+	padding: 0 5px;
 }
+
+article header .categories a.label:hover,
+article header .categories a.label:active{
+	background-color: #fcb421;
+	color: #fff;
+}
+
 
 article.post h2{
 	margin-top: 10px;
@@ -16,25 +26,6 @@ article.post h2{
 
 article .wp-post-image{
 	margin-bottom: 20px;
-}
-
-header .categories .label{
-	font-size: 85%;
-	font-weight: normal;
-	font-family: "Cabin","Lucida Grande","Lucida Sans Unicode",Arial,sans-serif;
-	color: #fff;
-	text-transform: uppercase;
-	background-color: #fcb421;
-	padding: 0 5px;
-}
-
-footer .temi .label{
-	font-size: 120%;
-	font-weight: normal;
-	color: #000;
-	border: 1px solid #e3e3e3;
-	padding: 0 5px;
-	text-transform: lowercase;
 }
 
 div#allegati ul{
@@ -54,4 +45,39 @@ div#allegati h4{
 	color: #D8D8D1;
 	margin-right: 5px;
 }
+
+.file-size{
+	background-color: #e3e3e3;
+	padding: 3px;
+
+}
+
+article .author{
+	border-bottom: 1px solid #f3f3f3;
+	padding-bottom: 20px;
+}
+
+article footer{
+	background-color: #fff;
+	margin: 0px 0px 20px 0px;
+	padding: 0px;
+}
+
+footer .temi .label{
+	font-size: 120%;
+	font-weight: normal;
+	color: #000;
+	border: 1px solid #e3e3e3;
+	padding: 0 5px;
+	text-transform: lowercase;
+}
+
+footer .temi a.label:hover,
+footer .temi a.label:active{
+	color: #fff;
+	border: 1px solid #A01D21;
+	background-color: #A01D21;
+}
+
+
 
