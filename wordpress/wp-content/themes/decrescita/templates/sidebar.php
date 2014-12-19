@@ -10,7 +10,7 @@
 	<?php if( $attachments->exist() ) : ?>
 		<div id="allegati">
 		  <h4>Materiali scaricabili</h4>
-		  <p>Totale documenti: <?php echo $attachments->total(); ?></p>
+		  <!--<p>Totale documenti: <?php //echo $attachments->total(); ?></p>-->
 		  <ul>
 		    <?php while( $attachments->get() ) : ?>
 		      <li>
@@ -20,7 +20,7 @@
 		        <!--Source: <?php //echo $attachments->src( 'full' ); ?><br />-->
 		        <!--Title Field:--><span class="glyphicon glyphicon-file" aria-hidden="true"></span><?php echo $attachments->field( 'title' ); ?>
 		        <!--Caption Field: --><?php echo $attachments->field( 'caption' ); ?>
-		        <!--Size: --><?php echo $attachments->filesize(); ?>
+		        <!--Size: --><span class="file-size"><?php echo $attachments->filesize(); ?></span>
 		      </li>
 		    <?php endwhile; ?>
 		  </ul>
