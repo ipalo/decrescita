@@ -40,7 +40,7 @@
 		<?php endwhile; ?>
 	</div>
 
-	<div class="col-md-4">		
+	<div id="in_evidenza_home" class="col-md-4">		
 		<?php $eventi = new WP_Query(array(
 			'ignore_sticky_posts' => true,
 			'category_name' => 'eventi',
