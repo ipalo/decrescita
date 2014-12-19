@@ -17,7 +17,7 @@
     </nav>
 </header>
 
-<div id="tools-menu" class="row">
+<!--<div id="tools-menu" class="row">
   <div class="right">
     <ul class="nav nav-pills nav-stacked affix-top" data-spy="affix">
       <li><a href="#"><span class="valign"></span><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icona-cerca.png" width="25" title="Cerca" alt="Cerca"></a></li>
@@ -26,12 +26,12 @@
       <li><a href="#"><span class="valign"></span><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icona-glossario.png" width="25" title="Glossario" alt="Glossario"></a></li>
     </ul>
   </div>
-</div>
+</div>-->
 <?php if(is_front_page()) : ?>
 <div id="definition" class="row hidden-xs">
     <div class="col-md-12">
-        <h2>decrescita <span><em>s. f. </em><a href="">Svolta riflessiva</a> per la ricerca relazionale, personale e collettiva di una <a href="">qualità della vita</a> sganciata dall’ossessione per la crescita e dalla corsa alla produzione, al possesso e al consumo di merci;</span>
-        </h2>
+        <?php $definizione = get_page_by_path('definizione-decrescita', OBJECT, 'page'); ?>
+        <h2>decrescita <span><?php echo $definizione->post_content; ?></span></h2>
     </div>
 </div>
 <?php endif; ?>
