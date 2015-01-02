@@ -23,6 +23,9 @@ var Roots = {
   common: {
     init: function() {
       // JavaScript to be fired on all pages
+      $('.dropdown').hover(function(){ 
+        $('.dropdown-toggle', this).trigger('click'); 
+      });
     }
   },
   // Home page

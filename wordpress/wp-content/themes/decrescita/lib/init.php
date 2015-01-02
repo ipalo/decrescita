@@ -143,6 +143,13 @@ function persone_taxonomy() {
 }
 add_action('init', 'persone_taxonomy', 0);
 
+/*
+function wptp_add_categories_to_attachments() {
+    register_taxonomy_for_object_type( 'category', 'attachment' );
+}
+add_action( 'init' , 'wptp_add_categories_to_attachments' );
+*/
+
 
 define('ACF_LITE', true);
 add_filter('acf/settings/path', 'my_acf_settings_path');
@@ -233,10 +240,10 @@ if(function_exists("register_field_group"))
     'fields' => array (
       array (
         'key' => 'field_548f1be90157c',
-        'label' => 'In evidenza',
+        'label' => 'In sidebar homepage',
         'name' => 'in_evidenza',
         'type' => 'true_false',
-        'instructions' => 'Mostrare questo articolo nella sezione "in evidenza"? (max 3 articoli)',
+        'instructions' => 'Mostrare questo articolo nella sidebar dell\'homepage? (max 3 articoli)',
         'message' => '',
         'default_value' => 0,
       ),
@@ -269,7 +276,7 @@ if(function_exists("register_field_group"))
         'label' => 'Note',
         'name' => 'note',
         'type' => 'wysiwyg',
-        'instructions' => 'Inserisci le note per questo contenuto, appariranno nella sidebar di destra.',
+        'instructions' => 'Inserisci le note per questo contenuto, appariranno nello spazio a destra dell\'articolo.',
         'default_value' => '',
         'toolbar' => 'full',
         'media_upload' => 'yes',
