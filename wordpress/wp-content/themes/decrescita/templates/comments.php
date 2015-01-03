@@ -6,7 +6,7 @@
 
 <section id="comments" class="comments">
   <?php if (have_comments()) : ?>
-    <h2><?php printf(_nx('One response to &ldquo;%2$s&rdquo;', '%1$s responses to &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'decrescita'), number_format_i18n(get_comments_number()), '<span>' . get_the_title() . '</span>'); ?></h2>
+    <h2><?php printf(_nx('Un commento', '%1$s commenti', get_comments_number(), 'decrescita'), number_format_i18n(get_comments_number()), '<span>' . get_the_title() . '</span>'); ?></h2>
 
     <ol class="comment-list">
       <?php wp_list_comments(array('style' => 'ol', 'short_ping' => true)); ?>
@@ -32,5 +32,5 @@
     </div>
   <?php endif; ?>
 
-  <?php comment_form(); ?>
+  <?php comment_form(array('fields' => array('author', 'email'), 'comment_notes_after' => '')); ?>
 </section>
