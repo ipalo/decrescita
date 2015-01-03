@@ -52,17 +52,17 @@
   </div>
 </div>
 <div id="menu-temi" class="row navbar navbar-default">
-  <div class="navbar-header">
+  <!--<div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-temi-collapse">
       <span class="sr-only">Toggle navigation</span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <h4>Temi:</h4>
-  </div>
+  </div>-->
   <div id="menu-temi-collapse" class="navbar-collapse collapse">
     <ul class="nav navbar-nav">
+      <li><h4>Temi:</h4></li>
       <?php wp_list_categories(array('title_li' => '', 'taxonomy' => 'temi')); ?>
     </ul>
   </div>
