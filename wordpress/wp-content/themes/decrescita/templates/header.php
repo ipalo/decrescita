@@ -52,14 +52,15 @@
   </div>
 </div>
 <div id="menu-temi" class="row navbar navbar-default">
-  <!--<div class="navbar-header">
+  <div class="navbar-header">
+    <h4 class="hidden-sm hidden-md hidden-lg">Temi:</h4>
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-temi-collapse">
       <span class="sr-only">Toggle navigation</span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-  </div>-->
+  </div>
   <div id="menu-temi-collapse" class="navbar-collapse collapse">
     <ul class="nav navbar-nav">
       <li><h4>Temi:</h4></li>
