@@ -53,7 +53,7 @@
 </div>
 <div id="menu-temi" class="row navbar navbar-default">
   <div class="navbar-header">
-    <h4 class="hidden-sm hidden-md hidden-lg">Temi:</h4>
+    <h4 class="visible-xs-block">Temi:</h4>
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-temi-collapse">
       <span class="sr-only">Toggle navigation</span>
       <span class="icon-bar"></span>
