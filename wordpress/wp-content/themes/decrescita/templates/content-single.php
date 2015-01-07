@@ -1,5 +1,5 @@
 <?php while (have_posts()) : the_post(); ?>
-  <article <?php post_class(); ?>>
+  <article <?php post_class('col-xs-12 col-sm-8 col-sm-offset-2'); ?>>
     <header>
       <p class="post categories">
         <?php

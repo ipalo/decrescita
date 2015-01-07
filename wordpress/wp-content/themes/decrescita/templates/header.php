@@ -6,7 +6,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand text-hide" href="<?php echo esc_url(home_url('/')); ?>"><span id="definizione-decrescita" class="glyphicon-chevron-down"></span></a>
+      <a class="navbar-brand text-hide" href="<?php echo esc_url(home_url('/')); ?>"></a>
     </div>
     <nav id="primary-menu-collapse" class="collapse navbar-collapse" role="navigation">
       <?php

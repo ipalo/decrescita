@@ -16,7 +16,7 @@
   <div class="wrap container" role="document">
 
     <div class="content row">
-      <div class="col-md-12">
+      <div class="col-md-12 nopadding">
         <?php if(has_post_thumbnail() AND is_single()){ the_post_thumbnail('1170x365'); } ?>
       </div>
       <main class="main" role="main">

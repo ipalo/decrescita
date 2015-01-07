@@ -1,149 +1,139 @@
-#sponsored .description a{
-	text-transform: uppercase;
-	color: #000;
-	font-weight: normal;
-	font-size: 90%;
+.home {
+
+	#sponsored .description a{
+		text-transform: uppercase;
+		color: #000;
+		font-weight: normal;
+		font-size: 90%;
+	}
+
+	#sponsored .description a:hover, #sponsored .description a:visited, #sponsored .description a:active{
+		text-decoration: underline;
+	}
+
+	#sponsored .description h4 a{
+	    color: #000;
+	    text-decoration: none;
+	    text-transform:none;
+	    font-weight: bold;
+	    font-size: 100%;
+	}
+
+	#sponsored .description h4 a:hover, #sponsored .description h4 a:visited, #sponsored .description h4 a:active{
+	    background-color: #fff;
+	    text-decoration: none;
+	}
+
+	/* Main */
+
+	article.in-evidenza-home h4 mark{
+		background-color: #fff;
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+		font-weight: bold;
+		line-height: 1.2em;
+	}
+
+
+	/*Video*/
+	article.format-video .entry-content{
+		width: 100%;
+	}
+
+	article.format-video .entry-content img{
+		width: 50%;
+		float: left;
+	}
+
+	article.format-video .entry-content p{
+		width: 50%;
+		padding-left: 10px;
+		float: left;
+	}
+
+	article.format-video footer{
+		margin-top: 15px;
+		clear: left;
+	}
+
+	/*Quote*/
+
+	article.format-quote{
+		border-left: 10px solid #fecd46;
+		padding-left: 15px;
+	}
+
+	/* Prima sidebar Homepage*/
+	#in_evidenza_home article img {
+		margin:0;
+	}
+
+	#eventi-home{
+		background-color: #cdc8bf;
+		padding: 10px 15px;	
+	}
+
+	#eventi-home ul{
+		margin: 0;
+		padding: 0;
+	}
+
+	#eventi-home > h4{
+		color: #a01d21;
+		text-transform: uppercase;
+
+	}
+
+	#eventi-home ul li h4 a{
+		color: #a01d21;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	.in-evidenza-home{
+		background-color: #cdc8bf;
+		position: relative;
+		padding: 10px 15px;	
+		margin-top: 20px;
+	}
+
+	.in-evidenza-home h4 a{
+		color: #a01d21;
+		font-weight: bold;
+	}
+
+	.in-evidenza-home.has-post-thumbnail{
+		padding: 0;
+		margin: 0 auto;
+		margin-top: 20px;
+	}
+
+
+	/* Seconda sidebar Homepage*/
+	#glossario h4,
+	#persone h4{
+		color: #a01d21;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	#persone p,
+	#glossario p{
+		font-size: 100%;
+	}
+
+	#glossario a,
+	#persone a{
+		cursor: pointer;
+		border-bottom: 3px solid #FCB421;
+		color: #000;
+		text-decoration: none;
+		font-size: 120%;
+	}
+
+	#persone p img{
+		margin-top: 10px;
+	}
+
 }
-
-#sponsored .description a:hover, #sponsored .description a:visited, #sponsored .description a:active{
-	text-decoration: underline;
-}
-
-#sponsored .description h4 a{
-    color: #000;
-    text-decoration: none;
-    text-transform:none;
-    font-weight: bold;
-    font-size: 100%;
-}
-
-#sponsored .description h4 a:hover, #sponsored .description h4 a:visited, #sponsored .description h4 a:active{
-    background-color: #fff;
-    text-decoration: none;
-}
-
-/* Main */
-
-.home article{
-	border-bottom: 1px solid #f3f3f3;
-}
-
-.home article header{
-	padding-top: 10px;
-}
-
-article header .entry-title a{
-	color: #000;
-}
-
-article.in-evidenza-home h4 mark{
-	background-color: #fff;
-	position: absolute;
-	bottom: 20px;
-	left: 20px;
-	font-weight: bold;
-	line-height: 1.2em;
-}
-
-
-/*Video*/
-article.format-video .entry-content{
-	width: 100%;
-}
-
-article.format-video .entry-content img{
-	width: 50%;
-	float: left;
-}
-
-article.format-video .entry-content p{
-	width: 50%;
-	padding-left: 10px;
-	float: left;
-}
-
-article.format-video footer{
-	margin-top: 15px;
-	clear: left;
-}
-
-/*Quote*/
-
-article.format-quote{
-	border-left: 10px solid #fecd46;
-	padding-left: 15px;
-}
-
-/* Prima sidebar Homepage*/
-#in_evidenza_home article img {
-	margin:0;
-}
-
-#eventi-home{
-	background-color: #cdc8bf;
-	padding: 10px 15px;	
-}
-
-#eventi-home ul{
-	margin: 0;
-	padding: 0;
-}
-
-#eventi-home > h4{
-	color: #a01d21;
-	text-transform: uppercase;
-
-}
-
-#eventi-home ul li h4 a{
-	color: #a01d21;
-	font-weight: bold;
-	text-decoration: none;
-}
-
-.in-evidenza-home{
-	background-color: #cdc8bf;
-	position: relative;
-	padding: 10px 15px;	
-	margin-top: 20px;
-}
-
-.in-evidenza-home h4 a{
-	color: #a01d21;
-	font-weight: bold;
-}
-
-.in-evidenza-home.has-post-thumbnail{
-	padding: 0;
-	margin: 0 auto;
-	margin-top: 20px;
-}
-
-
-/* Seconda sidebar Homepage*/
-#glossario h4,
-#persone h4{
-	color: #a01d21;
-	text-transform: uppercase;
-	font-weight: bold;
-}
-
-#persone p,
-#glossario p{
-	font-size: 100%;
-}
-
-#glossario a,
-#persone a{
-	cursor: pointer;
-	border-bottom: 3px solid #FCB421;
-	color: #000;
-	text-decoration: none;
-	font-size: 120%;
-}
-
-#persone p img{
-	margin-top: 10px;
-}
-
-
