@@ -4,7 +4,7 @@
   }
 ?>
 
-<section id="comments" class="comments">
+<section id="comments" class="comments col-md-8">
   <?php if (have_comments()) : ?>
     <h2><?php printf(_nx('Un commento', '%1$s commenti', get_comments_number(), 'decrescita'), number_format_i18n(get_comments_number()), '<span>' . get_the_title() . '</span>'); ?></h2>
 

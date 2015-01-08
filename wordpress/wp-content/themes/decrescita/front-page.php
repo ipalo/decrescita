@@ -7,7 +7,6 @@
 				<div class="description">
 					<?php the_category( ' ' ); ?>
 					<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
-					<p class="author">di <?php the_author(); ?></p>
 				</div>
 				<?php the_post_thumbnail($sticky->current_post==0 ? '750x350' : '360x350'); ?>
 			</div>
