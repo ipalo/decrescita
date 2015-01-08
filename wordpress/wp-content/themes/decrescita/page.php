@@ -1,16 +1,5 @@
 <?php while (have_posts()) : the_post(); ?>
-	<div class="row">
-		<div class="page-header col-md-12">
-		  <h1>
-		    <?php echo roots_title(); ?>
-		  </h1>
-		  <?php if(taxonomy_exists('persone') OR taxonomy_exists('tag')) : ?>
-		  	<div id="taxonomy_description">
-		  		<?php echo do_shortcode(term_description()); ?>
-		  	</div>
-		  <?php endif; ?>
-		</div>
-	</div>
+	<?php get_template_part('templates/page', 'header'); ?>
 
 	<div class="row">
 		<div class="col-md-8">
@@ -47,7 +36,6 @@
 			<?php endif; ?>
 		</aside>
 	</div>
-	
 	<div class="row">
 		<?php wp_link_pages(array('before' => '<nav class="pagination">', 'after' => '</nav>')); ?>
 	</div>
