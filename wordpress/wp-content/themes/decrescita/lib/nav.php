@@ -49,6 +49,35 @@ class Roots_Nav_Walker extends Walker_Nav_Menu {
   }
 }
 
+class Footer_Nav_Walker extends Walker_Nav_Menu {
+  function check_current($classes) {
+    return preg_match('/(current[-_])|active/', $classes);
+  }
+
+  function start_lvl(&$output, $depth = 0, $args = array()) {
+    $output .= "\n<ul>\n";
+  }
+
+  function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
+    $item_html = '';
+    parent::start_el($item_html, $item, $depth, $args);
+
+    if (stristr($item_html, 'li class="divider')) {
+      $item_html = preg_replace('/<a[^>]*>.*?<\/a>/iU', '', $item_html);
+    }
+    elseif (stristr($item_html, 'li class="dropdown-header')) {
+      $item_html = preg_replace('/<a[^>]*>(.*)<\/a>/iU', '$1', $item_html);
+    }
+
+    $item_html = apply_filters('roots/wp_nav_menu_item', $item_html);
+    $output .= $item_html;
+  }
+
+  function display_element($element, &$children_elements, $max_depth, $depth = 0, $args, &$output) {
+    parent::display_element($element, $children_elements, $max_depth, $depth, $args, $output);
+  }
+}
+
 /**
  * Remove the id="" on nav menu items
  * Return 'menu-slug' for nav menu classes

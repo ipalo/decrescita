@@ -33,5 +33,14 @@
     <?php wp_footer(); ?>
   </div>
 
+  <div id="external-footer" class="wrap container">
+    <?php
+      if (has_nav_menu('menu_footer')) {
+        wp_nav_menu(array('theme_location' => 'menu_footer', 'menu_class' => 'list-inline', 'walker' => new Footer_Nav_Walker()));
+      }
+    ?>
+  </div>
+
+
 </body>
 </html>

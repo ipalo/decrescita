@@ -6,12 +6,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand text-hide" href="<?php echo esc_url(home_url('/')); ?>"></a>
+      <a class="navbar-brand text-hide" href="<?php echo esc_url(home_url('/')); ?>">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-decrescita.png" title="la Decrescita" alt="la Decrescita">
+      </a>
     </div>
     <nav id="primary-menu-collapse" class="collapse navbar-collapse" role="navigation">
       <?php
-        if (has_nav_menu('primary_navigation')) :
-          wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav navbar-right'));
+        if (has_nav_menu('menu_istituzionale')) :
+          wp_nav_menu(array('theme_location' => 'menu_istituzionale', 'menu_class' => 'nav navbar-nav navbar-right'));
         endif;
       ?>
     </nav>
@@ -43,17 +45,19 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <h4 class="visible-xs-block">Categorie:</h4>
+    <h4>Categorie:</h4>
   </div>
   <div id="menu-categorie-collapse" class="navbar-collapse collapse">
-    <ul class="nav navbar-nav">
-      <?php wp_list_categories(array('title_li' => '')); ?>
-    </ul>
+    <?php
+      if (has_nav_menu('menu_categorie')) :
+        wp_nav_menu(array('theme_location' => 'menu_categorie', 'menu_class' => 'nav navbar-nav navbar-left'));
+      endif;
+    ?>
   </div>
 </div>
 <div id="menu-temi" class="row navbar navbar-default">
   <div class="navbar-header">
-    <h4 class="visible-xs-block">Temi:</h4>
+    <h4>Temi:</h4>
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-temi-collapse">
       <span class="sr-only">Toggle navigation</span>
       <span class="icon-bar"></span>
@@ -63,7 +67,6 @@
   </div>
   <div id="menu-temi-collapse" class="navbar-collapse collapse">
     <ul class="nav navbar-nav">
-      <li><h4>Temi:</h4></li>
       <?php wp_list_categories(array('title_li' => '', 'taxonomy' => 'temi')); ?>
     </ul>
   </div>
