@@ -28,7 +28,7 @@ function roots_title() {
       return single_cat_title('', false);
     }
   } elseif (is_search()) {
-    return sprintf(__('Risultati per la ricerca di %s', 'decrescita'), get_search_query());
+    return sprintf(__('Risultati per la ricerca di "%s"', 'decrescita'), get_search_query());
   } elseif (is_404()) {
     return __('Ooops! Pagina non trovata (errore 404)', 'decrescita');
   } else {
