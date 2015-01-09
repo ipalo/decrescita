@@ -21,7 +21,8 @@ $roots_includes = array(
   'lib/gallery.php',         // Custom [gallery] modifications
   'lib/scripts.php',         // Scripts and stylesheets
   'lib/extras.php',          // Custom functions
-  'taxonomy-tinymce/taxonomy-tinymce.php'
+  'taxonomy-tinymce/taxonomy-tinymce.php',
+  'wpas/wpas.php'
 );
 
 foreach ($roots_includes as $file) {

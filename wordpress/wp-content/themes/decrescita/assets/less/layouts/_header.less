@@ -69,16 +69,16 @@ ul.nav li.dropdown:hover > ul.dropdown-menu{
 	background-color: #d8d8d1;
 }
 
-#menu-categorie ul li{
+#menu-categorie > li{
 	border-right: 2px solid #000;
 	padding: 0px 8px;
 }
 
-#menu-categorie ul > li:last-child {
+#menu-categorie > li:last-child {
 	border-right: none;
 }
 
-#menu-categorie ul li a{
+#menu-categorie li a{
     padding: 0 5px;
     text-decoration: none;
 	font-weight: bold;
@@ -103,26 +103,24 @@ ul.nav li.dropdown:hover > ul.dropdown-menu{
     color: #fff;
 }
 
+#menu-categorie ul.dropdown-menu {
+	background-color: #d8d8d1;
+	border: none;
+}
+
 #menu-categorie ul.dropdown-menu li{
-	padding: 0px;
+	padding: 0 8px;
+	margin-bottom: 3px;
 }
 
 #menu-categorie ul.dropdown-menu li a{
 	color: #000;
 }
 
-#menu-categorie ul.dropdown-menu li a:hover{
-	background-color: #f5f5f5;
-	-webkit-border-radius: 0px;  
-    -moz-border-radius: 0px;  
-    border-radius: 0px; 
-}
-
+#menu-categorie ul.dropdown-menu li a:hover,
 #menu-categorie ul.dropdown-menu .active > a{
-	background-color: #f5f5f5;
-	-webkit-border-radius: 0px;  
-    -moz-border-radius: 0px;  
-    border-radius: 0px;
+	display:inline-block;
+	color:#fff;
 }
 
 /* Menù temi */
