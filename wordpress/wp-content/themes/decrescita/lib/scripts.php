@@ -36,7 +36,6 @@ function roots_scripts() {
       'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'
     );
   }
-
   wp_enqueue_style('roots_css', get_template_directory_uri() . $assets['css'], false, null);
 
   /**
@@ -57,6 +56,11 @@ function roots_scripts() {
   wp_enqueue_script('modernizr', get_template_directory_uri() . $assets['modernizr'], array(), null, true);
   wp_enqueue_script('jquery');
   wp_enqueue_script('roots_js', get_template_directory_uri() . $assets['js'], array(), null, true);
+
+  if (has_category('eventi')) {
+    wp_enqueue_script('maps-api', '//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false', array(), null, true);
+    wp_enqueue_script('render-map', get_template_directory_uri() . '/assets/js/render-map.js', array(), null, true);
+  }
 }
 add_action('wp_enqueue_scripts', 'roots_scripts', 100);
 

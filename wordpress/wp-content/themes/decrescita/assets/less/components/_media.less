@@ -1,13 +1,42 @@
 // Captions
 .wp-caption {
   &:extend(.thumbnail all);
+  text-align: center;
+  font-size: 12px;
+  font-style: italic;
+  border: none;
+  background-color: transparent;
+  margin-bottom:10px;
+}
+
+.wp-caption img {
+	border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;  
+    -moz-border-radius: 0px !important;
+    float: none !important;
 }
 
 .wp-caption-text {
   &:extend(.thumbnail .caption all);
+  padding:5px;
 }
 
 // Gallery shortcode
 .gallery-row {
   padding: (@line-height-computed / 2) 0;
 }
+
+.acf-map {
+  width: 100%;
+  height: 400px;
+  border: #ccc solid 1px;
+  margin: 20px 0;
+}
+
+.acf-map img { 
+  max-width: none !important;
+}
+
+.acf-map label { 
+  width: auto !important; display:inline !important; 
+} 
