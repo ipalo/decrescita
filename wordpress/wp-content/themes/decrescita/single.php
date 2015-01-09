@@ -28,19 +28,11 @@
 	      <?php $attachments = new Attachments( 'attachments' ); ?>
 	      <?php if( $attachments->exist() ) : ?>
 	        <div id="allegati">
-	          <h4>Materiali scaricabili</h4>
-	          <!--<p>Totale documenti: <?php //echo $attachments->total(); ?></p>-->
+	          <h4>Materiali scaricabili (<?php echo $attachments->total(); ?>)</h4>
 	          <ul>
 	            <?php while( $attachments->get() ) : ?>
 	              <li>
 	                <a href="<?php echo $attachments->url(); ?>" title="<?php echo $attachments->field( 'title' ); ?>"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> <?php echo $attachments->field( 'title' ); ?></a> <span class="file-size"><?php echo $attachments->filesize(); ?></span>
-	                <!--Subtype: <?php //echo $attachments->subtype(); ?><br />
-	                URL: <?php //echo $attachments->url(); ?><br />
-	                Image: <?php //echo $attachments->image( 'thumbnail' ); ?><br />
-	                Source: <?php //echo $attachments->src( 'full' ); ?><br />
-	                Title Field:<span class="glyphicon glyphicon-file" aria-hidden="true"></span><?php echo $attachments->field( 'title' ); ?>
-	                Caption Field:<?php echo $attachments->field( 'caption' ); ?> 
-	                Size:<span class="file-size"><?php echo $attachments->filesize(); ?></span>-->
 	              </li>
 	            <?php endwhile; ?>
 	          </ul>
@@ -52,6 +44,6 @@
 	<div class="row">
     	<?php comments_template('/templates/comments.php'); ?>
     </div>
-    
+
   </article>
 <?php endwhile; ?>
