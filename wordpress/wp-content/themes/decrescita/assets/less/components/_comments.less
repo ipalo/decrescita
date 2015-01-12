@@ -18,7 +18,7 @@
   &:extend(.btn-primary all);
 }
 
-/*comments form*/
+//Comments form
 #commentform textarea{
 	height: auto;
 }
@@ -27,4 +27,47 @@
     outline: none !important;
     border:1px solid #999;
     box-shadow: 0 0 5px #999;
+}
+
+//Comments list
+section#comments h2{
+  display: inline-block;
+  padding: 10px;
+  background-color: #f8f8f8;
+}
+
+section#comments a{
+  border-bottom: 1px solid #e3e3e3;
+  color: #A01D21;
+  font-family: "Cabin","Lucida Grande","Lucida Sans Unicode",Arial,sans-serif;
+}
+
+section#comments a:hover,
+section#comments a:active{
+  text-decoration: none;
+  border-bottom: 1px solid #A01D21;
+}
+
+section#comments ol li{
+  padding:10px 0px;
+}
+
+section#comments ol li .comment-content p{
+  border: 1px solid #e3e3e3;
+  padding: 20px 10px;
+}
+
+section#comments ol li .reply a{
+  float: right;
+}
+
+section#comments ol li img.avatar{
+  border-radius: 100px;
+  -webkit-border-radius: 100px;  
+  -moz-border-radius: 100px;
+  margin: 0px 10px 0px 0px;
+}
+
+section#comments div#respond{
+  clear: right;
 }
