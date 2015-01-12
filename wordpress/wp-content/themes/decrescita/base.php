@@ -16,7 +16,7 @@
   <div class="wrap container" role="document">
 
     <div class="content row">
-        <?php if(has_post_thumbnail() AND is_single()) : ?>
+        <?php if(has_post_thumbnail() AND is_single() AND !has_post_format('video')) : ?>
           <div class="col-md-12 nopadding">
             <?php the_post_thumbnail('1170x365'); ?>
           </div>
