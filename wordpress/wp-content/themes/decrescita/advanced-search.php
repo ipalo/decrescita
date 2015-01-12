@@ -7,11 +7,15 @@ define('WPAS_DEBUG', false);
 
 <div id="advanced-search-form" class="row">
 	<div class="col-md-12">
-		<h1><?php the_title(); ?></h1>
+		<h1>Ricerca</h1>
 
 		<?php 
 
 			$args = array();
+
+			$page_ricerca = get_page_by_path('ricerca');
+			
+			$args['form'] = array('action' => get_permalink($page_ricerca->ID));
 
 			$args['wp_query'] = array('post_type' => 'post',
 		                            'posts_per_page' => 5,
