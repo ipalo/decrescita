@@ -1,4 +1,4 @@
-<p class="byline author-footer vcard temi">
+<p class="byline author-info vcard temi">
 	<?php
 	$terms = get_the_terms($post->ID, 'temi');
 	if(!empty($terms)) {
