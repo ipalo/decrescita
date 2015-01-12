@@ -23,7 +23,7 @@ function roots_title() {
       return sprintf(__('Articoli per anno: %s', 'decrescita'), get_the_date('Y'));
     } elseif (is_author()) {
       $author = get_queried_object();
-      return sprintf(__('Articoli per autore: %s', 'decrescita'), apply_filters('the_author', is_object($author) ? $author->display_name : null));
+      return sprintf(__('Tutti gli articoli di %s', 'decrescita'), apply_filters('the_author', is_object($author) ? $author->display_name : null));
     } else {
       return single_cat_title('', false);
     }

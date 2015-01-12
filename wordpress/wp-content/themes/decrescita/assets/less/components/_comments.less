@@ -18,7 +18,7 @@
   &:extend(.btn-primary all);
 }
 
-//Comments form
+//comments form
 #commentform textarea{
 	height: auto;
 }
@@ -29,50 +29,101 @@
     box-shadow: 0 0 5px #999;
 }
 
-//Comments list
-section#comments h2{
-  display: inline-block;
-  padding: 10px;
-  background-color: #f8f8f8;
+//comment list
+
+#comments {
+  
+  h2{
+    display: inline-block;
+    padding: 10px;
+    background-color: #f8f8f8;
+  }
+
+  ol.comment-list a{
+    border-bottom: 1px solid #e3e3e3;
+    color: #A01D21;
+    font-family: "Cabin","Lucida Grande","Lucida Sans Unicode",Arial,sans-serif;
+  }
+
+  ol.comment-list a:hover,
+  ol.comment-lista:active{
+    text-decoration: none;
+    border-bottom: 1px solid #A01D21;
+  }
+
+  ol li{
+    padding:10px 0px;
+  }
+
+  ol li .comment-content p{
+    border: 1px solid #e3e3e3;
+    padding: 20px 10px;
+  }
+
+  ol li .reply a{
+    float: right;
+  }
+
+  ol li img.avatar{
+    border-radius: 100px;
+    -webkit-border-radius: 100px;  
+    -moz-border-radius: 100px;
+    margin: 0px 5px 0px 0px;
+  }
+
+  ol li .comment-author b{
+    font-size: 1.2em;
+    text-transform: uppercase;
+  }
+
+  #respond{
+    clear: right;
+  }
+
+  .comment {
+
+    .comment-body {
+      margin:20px 0;
+    }
+
+    .comment-content p {
+      margin-bottom:5px;
+    }
+
+    .comment-meta {
+      position: relative;
+      padding-right: 0;
+      margin-bottom: 5px;
+    }
+
+    .comment-author {
+        display: inline-block;
+        vertical-align: bottom;
+      }
+
+    .comment-author .says {
+      display: none;
+      visibility: hidden;
+    }
+
+    .comment-metadata {
+      display: inline-block;
+      float:right;
+    }
+
+    .edit-link {
+      margin-left:10px;
+      text-transoform:none;
+    }
+
+    footer a {
+      text-transform: none;
+      font-weight: normal;
+    }
+
+  }
+
 }
 
-section#comments ol.comment-list a{
-  border-bottom: 1px solid #e3e3e3;
-  color: #A01D21;
-  font-family: "Cabin","Lucida Grande","Lucida Sans Unicode",Arial,sans-serif;
-}
 
-section#comments ol.comment-list a:hover,
-section#comments ol.comment-lista:active{
-  text-decoration: none;
-  border-bottom: 1px solid #A01D21;
-}
 
-section#comments ol li{
-  padding:10px 0px;
-}
-
-section#comments ol li .comment-content p{
-  border: 1px solid #e3e3e3;
-  padding: 20px 10px;
-}
-
-section#comments ol li .reply a{
-  float: right;
-}
-
-section#comments ol li img.avatar{
-  border-radius: 100px;
-  -webkit-border-radius: 100px;  
-  -moz-border-radius: 100px;
-  margin: 0px 10px 0px 0px;
-}
-
-section#comments ol li .comment-author b{
-  font-size: 1.2em;
-  text-transform: uppercase;
-}
-
-section#comments div#respond{
-  clear: right;
-}

@@ -75,3 +75,11 @@ function page_navi($before = '', $after = '') {
   }
   echo '</ul>'.$after."";
 }
+
+
+
+add_filter( 'get_comment_date', 'new_comment_date_format' ); 
+function new_comment_date_format( $d ) {
+    $d = date("j/n/Y"); 
+    return $d;
+}
