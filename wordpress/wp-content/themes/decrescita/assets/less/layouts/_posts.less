@@ -4,10 +4,6 @@
 .hentry .entry-content { }
 .hentry footer { }
 
-.single article {
-	margin:20px 0;
-}
-
 article header .categories a.label{
 	font-size: 85%;
 	font-weight: bold;
@@ -143,25 +139,28 @@ footer p .fn{
 }
 
 //Inner articles
-.single article footer{
-	background-color: #fff;
-	border-bottom: none;
-	margin: 10px 0 10px 0;
-	padding: 0 10px 0 0;
+.single{
+	article {
+		margin:20px 0;
+	}
+	article footer{
+		background-color: #fff;
+		border-bottom: none;
+		margin: 10px 0 10px 0;
+		padding: 0 10px 0 0;
+	}
+
+	p.author-info a{
+		font-family: "Cabin","Lucida Grande","Lucida Sans Unicode",Arial,sans-serif;
+	}
+
+	p.quando{
+		background-color: #f3f3f3;
+		padding: 5px;
+		display: inline-block;
+	}
+
+	footer .temi .label{
+		font-size: 100%;
+	}
 }
-
-//Autore
-p.author-info{
-	color: #999;
-	font-size: 85%;
-
-}
-
-p.author-info a{
-	font-weight: bold;
-	font-family: "Cabin","Lucida Grande","Lucida Sans Unicode",Arial,sans-serif;
-	text-transform: uppercase;
-	color: #A01D21;
-}
-
-
