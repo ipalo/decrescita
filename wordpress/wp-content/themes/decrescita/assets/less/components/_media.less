@@ -6,7 +6,7 @@
   font-style: italic;
   border: none;
   background-color: transparent;
-  margin-bottom:10px;
+  margin-bottom:0px;
 }
 
 .wp-caption img {
@@ -19,6 +19,10 @@
 .wp-caption-text {
   &:extend(.thumbnail .caption all);
   padding:5px;
+}
+
+figcaption.wp-caption-text{
+  background-color: #e3e3e3;
 }
 
 // Gallery shortcode
@@ -43,8 +47,7 @@
 
 //Gallerie immagini
 body.single div[id^="bwg_container"] {
-  background-color: #f8f8f8;
-  padding: 30px 0px;
+  visibility: visible;
 }
 
 //Video
