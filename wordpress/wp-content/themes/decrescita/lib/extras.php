@@ -81,7 +81,7 @@ function attachments_decrescita($attachments) {
     'label'         => 'Allegati',
     'post_type'     => array( 'post', 'page' ),
     'filetype'      => null,
-    'button_text'   => __( 'Allega', 'decrescita' ),
+    'button_text'   => __( 'Allega file', 'decrescita' ),
     'modal_text'    => __( 'Allega', 'decrescita' ),
     'fields'        => array(
       array(
