@@ -1,24 +1,36 @@
-<header id="primary-menu" class="row navbar navbar-default" role="navigation">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#primary-menu-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand text-hide" href="<?php echo esc_url(home_url('/')); ?>">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-decrescita.png" title="la Decrescita" alt="la Decrescita">
-      </a>
-    </div>
-    <nav id="primary-menu-collapse" class="collapse navbar-collapse" role="navigation">
-      <?php
-        if (has_nav_menu('menu_istituzionale')) :
-          wp_nav_menu(array('theme_location' => 'menu_istituzionale', 'menu_class' => 'nav navbar-nav navbar-right'));
-        endif;
-      ?>
-    </nav>
-</header>
-
+ <div id="hairs" class="row">
+  <div class="col-md-4">
+    <a class="logo-decrescita text-hide" href="<?php echo esc_url(home_url('/')); ?>">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-decrescita.png" title="la Decrescita" alt="la Decrescita">
+    </a>    
+    <p class="descrizione"><?php bloginfo('description'); ?></p>
+  </div>
+  <div id="menu-strumenti" class="col-md-8 navbar navbar-default">  
+    <?php
+      if (has_nav_menu('menu_strumenti')) :
+        wp_nav_menu(array('theme_location' => 'menu_strumenti', 'menu_class' => 'nav nav-pills navbar-right'));
+      endif;
+    ?>
+  </div>
+  <header id="menu-istituzionale" class="col-md-8 navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-istituzionale-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand visible-xs visible-sm">Menu:</a>
+      </div>
+      <nav id="menu-istituzionale-collapse" class="collapse navbar-collapse" role="navigation">
+        <?php
+          if (has_nav_menu('menu_istituzionale')) :
+            wp_nav_menu(array('theme_location' => 'menu_istituzionale', 'menu_class' => 'nav navbar-nav navbar-right'));
+          endif;
+        ?>
+      </nav>
+  </header>
+</div>
 <!--<div id="tools-menu" class="row">
   <div class="right">
     <ul class="nav nav-pills nav-stacked affix-top" data-spy="affix">
@@ -45,7 +57,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <h4>Archivio:</h4>
+    <span class="navbar-brand">Archivio:</span>
   </div>
   <div id="menu-categorie-collapse" class="navbar-collapse collapse">
     <?php
@@ -57,13 +69,13 @@
 </div>
 <div id="menu-temi" class="row navbar navbar-default">
   <div class="navbar-header">
-    <h4>Temi:</h4>
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-temi-collapse">
       <span class="sr-only">Toggle navigation</span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
+    <span class="navbar-brand">Temi:</span>
   </div>
   <div id="menu-temi-collapse" class="navbar-collapse collapse">
     <ul class="nav navbar-nav">
