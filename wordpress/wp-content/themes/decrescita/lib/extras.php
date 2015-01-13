@@ -83,3 +83,9 @@ function new_comment_date_format( $d ) {
     $d = date("j/n/Y"); 
     return $d;
 }
+
+function disable_comment_url($fields) { 
+    unset($fields['url']);
+    return $fields;
+}
+add_filter('comment_form_default_fields','disable_comment_url');
