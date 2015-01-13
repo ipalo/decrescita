@@ -45,7 +45,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <h4>Categorie:</h4>
+    <h4>Archivio:</h4>
   </div>
   <div id="menu-categorie-collapse" class="navbar-collapse collapse">
     <?php

@@ -7,7 +7,6 @@
 	      	<?php if(get_field("quando")) : ?>
 	      		<p class="quando"><?php the_field('quando'); ?></p>
 	  		<?php endif; ?>
-	      	<?php get_template_part('templates/entry-meta'); ?>
 	    </header>
     </div>
 
@@ -33,7 +32,10 @@
 	        <?php the_content(); ?>
 	      </div>
 	      <footer>
+	      	<?php get_template_part('templates/entry-meta'); ?>
 	      	<?php get_template_part('templates/entry-temi'); ?>
+	      	<?php get_template_part('templates/entry-persone'); ?>
+	      	<?php get_template_part('templates/entry-glossario'); ?>
 	        <?php wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pages:', 'decrescita'), 'after' => '</p></nav>')); ?>
 	      </footer>
 	    </div>

@@ -27,18 +27,11 @@ article.post h2{
 	margin-top: 10px;
 }
 
-article .wp-post-image{
-	margin: 0 10px 10px 0;
+article header .post.categories {
+	margin-bottom:0;
 }
 
-article footer{
-	background-color: #fff;
-	border-bottom: 1px solid #f3f3f3;
-	margin: 0 0 20px 0;
-	padding: 0 10px 0 0;
-}
-
-footer .temi .label{
+.temi .label{
 	font-size: 120%;
 	font-weight: normal;
 	color: #000;
@@ -48,11 +41,22 @@ footer .temi .label{
 	line-height: 1.7em;
 }
 
-footer .temi a.label:hover,
-footer .temi a.label:active{
+.temi a.label:hover,
+.temi a.label:active{
 	color: #fff;
 	border: 1px solid #A01D21;
 	background-color: #A01D21;
+}
+
+article .wp-post-image{
+	margin: 0 10px 10px 0;
+}
+
+article footer{
+	background-color: #fff;
+	border-bottom: 1px solid #f3f3f3;
+	margin: 0 0 20px 0;
+	padding: 0 10px 0 0;
 }
 
 footer p .fn{
@@ -143,6 +147,7 @@ footer p .fn{
 	article {
 		margin:20px 0;
 	}
+	
 	article footer{
 		background-color: #fff;
 		border-bottom: none;
@@ -160,7 +165,7 @@ footer p .fn{
 		display: inline-block;
 	}
 
-	footer .temi .label{
+	.temi .label{
 		font-size: 100%;
 	}
 }
