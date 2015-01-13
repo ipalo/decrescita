@@ -76,6 +76,50 @@ function page_navi($before = '', $after = '') {
   echo '</ul>'.$after."";
 }
 
+function attachments_decrescita( $attachments )
+{
+  $args = array(
+
+    // title of the meta box (string)
+    'label'         => 'Allegati',
+
+    // all post types to utilize (string|array)
+    'post_type'     => array( 'post', 'page' ),
+
+    // allowed file type(s) (array) (image|video|text|audio|application)
+    'filetype'      => null,  // no filetype limit
+
+    // text for 'Attach' button in meta box (string)
+    'button_text'   => __( 'Allega', 'decrescita' ),
+
+    // text for modal 'Attach' button (string)
+    'modal_text'    => __( 'Allega', 'decrescita' ),
+
+    /**
+     * Fields for the instance are stored in an array. Each field consists of
+     * an array with three keys: name, type, label.
+     *
+     * name  - (string) The field name used. No special characters.
+     * type  - (string) The registered field type.
+     *                  Fields available: text, textarea
+     * label - (string) The label displayed for the field.
+     */
+
+    'fields'        => array(
+      array(
+        'name'  => 'title',                          // unique field name
+        'type'  => 'text',                           // registered field type
+        'label' => __( 'Titolo', 'decrescita' ),     // label to display
+      ),
+    ),
+
+  );
+
+  $attachments->register('attachments', $args);
+}
+
+add_action('attachments_register', 'attachments_decrescita');
+
 
 
 add_filter( 'get_comment_date', 'new_comment_date_format' ); 
