@@ -76,10 +76,34 @@ function page_navi($before = '', $after = '') {
   echo '</ul>'.$after."";
 }
 
+function attachments_decrescita($attachments) {
+  $args = array(
+    'label'         => 'Allegati',
+    'post_type'     => array( 'post', 'page' ),
+    'filetype'      => null,
+    'button_text'   => __( 'Allega file', 'decrescita' ),
+    'modal_text'    => __( 'Allega', 'decrescita' ),
+    'fields'        => array(
+      array(
+        'name'  => 'title',                          // unique field name
+        'type'  => 'text',                           // registered field type
+        'label' => __( 'Titolo', 'decrescita' ),     // label to display
+      ),
+    )
+  );
 
+  $attachments->register('attachments', $args);
+}
+add_action('attachments_register', 'attachments_decrescita');
 
-add_filter( 'get_comment_date', 'new_comment_date_format' ); 
 function new_comment_date_format( $d ) {
     $d = date("j/n/Y"); 
     return $d;
 }
+add_filter( 'get_comment_date', 'new_comment_date_format' ); 
+
+function disable_comment_url($fields) { 
+    unset($fields['url']);
+    return $fields;
+}
+add_filter('comment_form_default_fields','disable_comment_url');

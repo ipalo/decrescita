@@ -32,5 +32,5 @@
     </div>
   <?php endif; ?>
 
-  <?php comment_form(array('fields' => array('author', 'email'), 'comment_notes_after' => '')); ?>
+  <?php comment_form(array('comment_notes_after' => '')); ?>
 </section>

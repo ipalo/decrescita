@@ -1,6 +1,10 @@
 .banner { }
 
-//Menù principale
+#hairs {
+	padding-top:15px;
+	padding-bottom:15px;
+}
+
 ul.nav li.dropdown:hover > ul.dropdown-menu{
     display: block;    
 }
@@ -11,82 +15,123 @@ ul.nav li.dropdown:hover > ul.dropdown-menu{
 	min-height: 0;
 }
 
-.navbar-brand, .navbar-brand:active {
-	padding:0 15px;
+.logo-decrescita, .logo-decrescita:active {
+	padding: 0;
+	margin: 0 0 5px;
 	outline: none;
+	display: block;
+	float: none;
+	height: auto;
+}
+.descrizione {
+	margin: 0;
 }
 
-.navbar .navbar-header h4 {
+.navbar-brand {
 	font-size: 16px;
-	line-height: 22px;
-	margin: 0 15px;
+	line-height:30px;
 	text-transform: uppercase;
+	padding: 0 15px;
+	height:auto;
 }
 
-#primary-menu {
+.navbar-toggle {
+	margin: 0 15px 0 0;
+}
+
+#menu-strumenti {
+	padding: 0 15px 0 0;
+}
+
+#menu-strumenti ul > li > a {
+	//se serve cambiare qualcosa
+}
+
+// Menù istituzionale  
+
+#menu-istituzionale {
 	padding:0;
 }
 
-#primary-menu .navbar-nav > li > a {
+#menu-istituzionale .navbar-nav > li:hover,
+#menu-istituzionale .navbar-nav > li.active {
+	background-color: #eee;
+}
+
+#menu-istituzionale .navbar-nav > li > a {
 	color: #000;
 	text-transform: uppercase;
     padding-bottom: 0;
-    padding-top: 30px;
+    padding-top: 10px;
+    margin-bottom: 5px;
+    background-color: #fff;
+}
+
+#menu-istituzionale > li > .dropdown-menu {
+	border: none;
+	border-top: 5px solid #eee;
+	border-bottom: 5px solid #eee;
+	margin-top: -5px;
 }
 
 //Definizione
+
 #definition{
 	min-height: 245px;
 	background: url(../img/decrescita-illustrazione-menu.png) center bottom no-repeat;
 	background-color: #E5E3E2;
 }
 
-#definition h2{
+#definition h2 {
 	color: #a01d21;
 	font-weight: bold;
-	padding-left: 10px;
 }
 
-#definition h2 span{
+#definition h2 span {
 	font-family: Georgia,Serif;
 	color: #000;
 	font-weight: normal;
 }
 
-#definition h2 span a{
+#definition h2 span a {
 	color: #000;
 	border-bottom: 3px solid #a01d21;
 }
 
 #definition h2 span a:hover,
-#definition h2 span a:active{
+#definition h2 span a:active {
 	text-decoration: none;
 }
 
 //Menù categorie
-#menu-categorie{
+
+#menu-categorie {
 	background-color: #d8d8d1;
 }
 
-#menu-categorie ul.nav > li{
+#menu-categorie ul.nav > li {
 	border-right: 2px solid #000;
 	padding: 0px 8px;
+}
+#menu-categorie ul.nav > li:first-child {
+	padding-left: 0;
 }
 
 #menu-categorie ul.nav > li:last-child {
 	border-right: none;
 }
 
-#menu-categorie li a{
+#menu-categorie li a {
     padding: 0 5px;
     text-decoration: none;
 	font-weight: bold;
 	color: #000;
 	text-transform: uppercase;
+	line-height: 30px;
 }
 
 #menu-categorie a:hover,
-#menu-categorie a:active{
+#menu-categorie a:active {
 	background-color: #fcb421;   
     -webkit-border-radius: 6px;  
     -moz-border-radius: 6px;  
@@ -137,13 +182,13 @@ ul.nav li.dropdown:hover > ul.dropdown-menu{
 	color: #000;
 	font-size: 110%;
     font-weight: normal;
+    line-height: 26px;
     background-color: #fff;
     border-radius: 6px;
     -webkit-border-radius: 6px;  
     -moz-border-radius: 6px; 
-	margin-right: 10px;
-	padding: 2px 5px;
-	margin-bottom: 5px;
+    margin: 2px 10px 2px 0;
+	padding: 0 5px;
 }
 
 #menu-temi ul li a:hover,

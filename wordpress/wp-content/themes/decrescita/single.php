@@ -7,7 +7,6 @@
 	      	<?php if(get_field("quando")) : ?>
 	      		<p class="quando"><?php the_field('quando'); ?></p>
 	  		<?php endif; ?>
-	      	<?php get_template_part('templates/entry-meta'); ?>
 	    </header>
     </div>
 
@@ -16,16 +15,13 @@
 	      <div class="entry-content">
 	      	<?php 
 	      		$luogo = get_field('luogo');
-	      		if(!empty($luogo)):
-	      			//get_template_part('templates/render-map');
-	      	?>
+	      		if(!empty($luogo)):	?>
 		      	<div class="acf-map">
 		      		<div class="marker" data-title="<?php echo $luogo['address']; ?>" data-lat="<?php echo $luogo['lat']; ?>" data-lng="<?php echo $luogo['lng']; ?>">
 		      			<div id="gmap-bodyContent" style="max-width: 400px;line-height: normal;white-space: nowrap;overflow: auto;">
 		      				<p style="line-height:1.3;margin:20px 0;"><?php echo $luogo['address']; ?><br/><a href="http://maps.google.com/maps?daddr=<?php echo urlencode($luogo['address']); ?>" title="Ottieni indicazioni stradali" target="_blank">Indicazioni stradali</a></p>
 		      				<div class="clear clearfix"></div>
 		      			</div>
-  						
   					</div>
 		      	</div>
 	      	<?php endif; ?>
@@ -33,7 +29,10 @@
 	        <?php the_content(); ?>
 	      </div>
 	      <footer>
+	      	<?php get_template_part('templates/entry-meta'); ?>
 	      	<?php get_template_part('templates/entry-temi'); ?>
+	      	<?php get_template_part('templates/entry-persone'); ?>
+	      	<?php get_template_part('templates/entry-glossario'); ?>
 	        <?php wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pages:', 'decrescita'), 'after' => '</p></nav>')); ?>
 	      </footer>
 	    </div>
