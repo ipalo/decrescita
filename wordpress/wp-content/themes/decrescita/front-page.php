@@ -1,7 +1,9 @@
 <div class="page-header">
 	<div class="row" id="sponsored">
 		<?php $sticky = get_option( 'sticky_posts' );
-		$sticky = new WP_Query(array('posts_per_page' => 2, 'post__in'  => $sticky));
+		rsort( $sticky );
+		$sticky = array_slice($sticky, 0, 2);
+		$sticky = new WP_Query(array('post__in'  => $sticky, 'ignore_sticky_posts' => 1));
 		while ( $sticky->have_posts() ) : $sticky->the_post(); ?>
 			<div class="col-md-<?php echo $sticky->current_post==0 ? 8 : 4 ?>">
 				<div class="description">
@@ -86,24 +88,22 @@
 	</div>
 
 	<div class="col-md-2">
-		<?php $glossario = get_tags('number=1');
+		<?php $glossario = get_tags();
+			shuffle($glossario);
 			if(!empty($glossario) && !is_wp_error($glossario)) : ?>
 			<div id="glossario">
 				<h4>Glossario</h4>
-				<?php foreach ($glossario as $tag) : ?>
-					<a href="<?php echo get_tag_link( $tag->term_id ); ?>" title="<?php sprintf( __( 'View all post filed under %s', 'decrescita' ), $tag->name ); ?>"><?php echo $tag->name; ?></a>
-					<p><?php $tag_description = get_extended($tag->description); echo do_shortcode($tag_description['main']); ?></p>
-				<?php endforeach; ?>
+				<a href="<?php echo get_tag_link( $glossario[0]->term_id ); ?>" title="<?php sprintf( __( 'View all post filed under %s', 'decrescita' ), $glossario[0]->name ); ?>"><?php echo $glossario[0]->name; ?></a>
+				<p><?php $tag_description = get_extended($glossario[0]->description); echo do_shortcode($tag_description['main']); ?></p>
 			</div>
 		<?php endif; ?>
-		<?php $persona = get_terms('persone', 'number=1');
+		<?php $persona = get_terms('persone');
+			shuffle($persona);
 			if(!empty($persona) && !is_wp_error($persona)) : ?>
 			<div id="persone">
 				<h4>Persone</h4>
-				<?php foreach ($persona as $term ) : ?>
-					<a href="<?php echo get_term_link( $term ); ?>" title="<?php sprintf( __( 'View all post filed under %s', 'decrescita' ), $term->name ); ?>"><?php echo $term->name; ?></a>
-					<p><?php $term_description = get_extended($term->description); echo do_shortcode($term_description['main']); ?></p>
-				<?php endforeach; ?>
+				<a href="<?php echo get_term_link( $persona[0] ); ?>" title="<?php sprintf( __( 'View all post filed under %s', 'decrescita' ), $persona[0]->name ); ?>"><?php echo $persona[0]->name; ?></a>
+				<p><?php $term_description = get_extended($persona[0]->description); echo do_shortcode($term_description['main']); ?></p>
 			</div>
 		<?php endif; ?>
 	</div>
