@@ -4,8 +4,10 @@
 	    <header class="col-md-12">
 	      	<?php get_template_part('templates/entry-categories'); ?>
 	      	<h2 class="entry-title"><?php the_title(); ?></h2>
-	      	<?php if(get_field("quando")) : ?>
-	      		<p class="quando"><?php the_field('quando'); ?></p>
+	      	<?php if(has_category('eventi')) : ?>
+	      		<?php if(get_field("quando")) : ?>
+	      			<p class="quando"><?php the_field('quando'); ?></p>
+	  			<?php endif; ?>
 	  		<?php endif; ?>
 	    </header>
     </div>
@@ -13,17 +15,18 @@
     <div class="row">
 	    <div class="col-xs-12 col-sm-8">
 	      <div class="entry-content">
-	      	<?php 
-	      		$luogo = get_field('luogo');
-	      		if(!empty($luogo)):	?>
-		      	<div class="acf-map">
-		      		<div class="marker" data-title="<?php echo $luogo['address']; ?>" data-lat="<?php echo $luogo['lat']; ?>" data-lng="<?php echo $luogo['lng']; ?>">
-		      			<div id="gmap-bodyContent" style="max-width: 400px;line-height: normal;white-space: nowrap;overflow: auto;">
-		      				<p style="line-height:1.3;margin:20px 0;"><?php echo $luogo['address']; ?><br/><a href="http://maps.google.com/maps?daddr=<?php echo urlencode($luogo['address']); ?>" title="Ottieni indicazioni stradali" target="_blank">Indicazioni stradali</a></p>
-		      				<div class="clear clearfix"></div>
-		      			</div>
-  					</div>
-		      	</div>
+	      	<?php if(has_category('eventi')) : ?>
+		      	<?php $luogo = get_field('luogo');
+		      		if(!empty($luogo)):	?>
+			      	<div class="acf-map">
+			      		<div class="marker" data-title="<?php echo $luogo['address']; ?>" data-lat="<?php echo $luogo['lat']; ?>" data-lng="<?php echo $luogo['lng']; ?>">
+			      			<div id="gmap-bodyContent" style="max-width: 400px;line-height: normal;white-space: nowrap;overflow: auto;">
+			      				<p style="line-height:1.3;margin:20px 0;"><?php echo $luogo['address']; ?><br/><a href="http://maps.google.com/maps?daddr=<?php echo urlencode($luogo['address']); ?>" title="Ottieni indicazioni stradali" target="_blank">Indicazioni stradali</a></p>
+			      				<div class="clear clearfix"></div>
+			      			</div>
+	  					</div>
+			      	</div>
+	      		<?php endif; ?>
 	      	<?php endif; ?>
 
 	        <?php the_content(); ?>
