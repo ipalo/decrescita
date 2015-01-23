@@ -30,13 +30,14 @@
 	      	<?php endif; ?>
 
 	        <?php the_content(); ?>
+
 	      </div>
-	      <footer>
-	      	<?php get_template_part('templates/entry-meta'); ?>
+	      <footer class="entry-footer">
 	      	<?php get_template_part('templates/entry-temi'); ?>
 	      	<?php get_template_part('templates/entry-persone'); ?>
 	      	<?php get_template_part('templates/entry-glossario'); ?>
-	        <?php wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pages:', 'decrescita'), 'after' => '</p></nav>')); ?>
+	      	<?php get_template_part('templates/entry-meta'); ?>
+	        <?php wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pagine:', 'decrescita'), 'after' => '</p></nav>')); ?>
 	      </footer>
 	    </div>
 	    <aside class="sidebar" role="complementary">
