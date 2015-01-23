@@ -78,18 +78,16 @@
     <span class="navbar-brand">Temi:</span>
   </div>
   <div id="menu-temi-collapse" class="navbar-collapse collapse">
-    <nav class="nav navbar-nav">
-      <?php 
-        $terms = get_terms('temi');
-        if(!empty($terms)) {
-          $out = '';
-          foreach($terms as $term) {
-            $out .= '<a class="label label-categoria" href="'.get_term_link($term->slug, 'temi').'" title="'.esc_attr(sprintf(__( "Tutti gli articoli in %s", 'decrescita'), $term->name)).'">'.$term->name.'</a>, ';
-          }
-          echo rtrim($out, ", ");
+    <?php 
+      $terms = get_terms('temi');
+      if(!empty($terms)) {
+        $out = '';
+        foreach($terms as $term) {
+          $out .= '<a class="label label-categoria" href="'.get_term_link($term->slug, 'temi').'" title="'.esc_attr(sprintf(__( "Tutti gli articoli in %s", 'decrescita'), $term->name)).'">'.$term->name.'</a>, ';
         }
-      ?>
-     </nav>
+        echo rtrim($out, ", ");
+      }
+    ?>
     <!--<ul class="nav navbar-nav">
       <?php wp_list_categories(array('title_li' => '', 'taxonomy' => 'temi')); ?>
     </ul>-->
