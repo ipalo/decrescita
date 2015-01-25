@@ -1,9 +1,19 @@
-<form role="search" method="get" class="search-form form-inline" action="<?php echo esc_url(home_url('/')); ?>">
-  <label class="sr-only"><?php _e('Ricerca:', 'decrescita'); ?></label>
-  <div class="input-group">
-    <input type="search" value="<?php echo get_search_query(); ?>" name="s" class="search-field form-control" placeholder="<?php _e('Cosa stai cercando?', 'decrescita'); ?>" required>
-    <span class="input-group-btn">
-      <button type="submit" class="search-submit btn btn-default"><?php _e('Cerca', 'decrescita'); ?></button>
-    </span>
-  </div>
-</form>
+<?php
+	$args = array();
+	$page_ricerca = get_page_by_path('ricerca');		
+	$args['form'] = array('action' => get_permalink($page_ricerca->ID));
+
+	$args['wp_query'] = array('post_type' => 'post',
+                            'posts_per_page' => 5,
+                            'order' => 'DESC',
+                            'orderby' => 'date');
+
+	$args['fields'][] = array('type' => 'search',
+                            'label' => 'Cerca',
+                            'placeholder' => 'cosa stai cercando?',
+                            'class' => 'form-control');		
+
+	$search = new WP_Advanced_Search($args);
+	$search->the_form();
+?>
+s

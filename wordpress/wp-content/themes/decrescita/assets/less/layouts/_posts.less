@@ -8,9 +8,10 @@ article header .categories a.label{
 	font-size: 85%;
 	font-weight: bold;
 	font-family: "Cabin","Lucida Grande","Lucida Sans Unicode",Arial,sans-serif;
-	color: #fcb421;
+	color: #000;
+	background-color: #f1f1f1;
 	text-transform: uppercase;
-	padding: 0 5px;
+	padding: 0 2px;
 }
 
 article header .categories a.label:hover,
@@ -20,7 +21,7 @@ article header .categories a.label:active{
 }
 
 article header .entry-title a{
-		color: #000;
+		color: #fcb421;
 	}
 
 article.post h2{
@@ -32,11 +33,11 @@ article header .post.categories {
 }
 
 .temi .label{
-	font-size: 120%;
+	font-size: 100%;
 	font-weight: normal;
-	color: #000;
-	border: 1px solid #e3e3e3;
-	padding: 0 5px;
+	color: #a01d21;
+	background-color: #ebebe7;
+	padding: 0 2px;
 	text-transform: lowercase;
 	line-height: 1.7em;
 }
@@ -44,7 +45,6 @@ article header .post.categories {
 .temi a.label:hover,
 .temi a.label:active{
 	color: #fff;
-	border: 1px solid #A01D21;
 	background-color: #A01D21;
 }
 
@@ -110,19 +110,20 @@ article.format-quote{
 	padding: 10px;
 }
 
-article.format-quote div.entry-content{
+article.format-quote .entry-content{
 	font-size: 160%;
 	font-style: italic;
 }
 
-article.format-quote p a{
-	font-family: "Cabin","Lucida Grande","Lucida Sans Unicode",Arial,sans-serif;
-	font-size: 105%;
-	padding: 0;
-}
-article.format-quote p.persone{
+article.format-quote .persone{
 	margin-top: -10px;
 	padding-bottom: 15px;
+}
+
+article.format-quote .persone a{
+	font-family: "Cabin","Lucida Grande","Lucida Sans Unicode",Arial,sans-serif;
+	font-size: 110%;
+	padding: 0;
 }
 
 article.format-quote p a:hover, article.format-quote p a:active, article.format-quote p a:visited{

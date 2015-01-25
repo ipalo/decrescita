@@ -27,6 +27,9 @@ define('WPAS_DEBUG', false);
 		                            'placeholder' => 'cosa stai cercando?',
 		                            'class' => 'form-control');				
 
+			$args['fields'][] = array('type' => 'submit',
+		                            'value' => 'Cerca');
+
 			$args['fields'][] = array('type' => 'taxonomy',
 		                            'label' => 'Categoria',
 		                            'taxonomy' => 'category',
@@ -54,9 +57,6 @@ define('WPAS_DEBUG', false);
 		                            'format' => 'multi-select',
 		                            'operator' => 'IN',
 		                        	'class' => 'form-control');
-
-			$args['fields'][] = array('type' => 'submit',
-		                            'value' => 'Cerca');
 
 			$search = new WP_Advanced_Search($args);
 

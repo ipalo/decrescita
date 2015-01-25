@@ -95,7 +95,7 @@ Class WPAS_Field {
 
     function build_field() {
         if ($this->format != 'hidden') {
-            $output = '<div id="wpas-'.$this->id.'" class="wpas-'.$this->id.' wpas-'.$this->type.'-field wpas-field form-group col-md-2">';
+            $output = '<div id="wpas-'.$this->id.'" class="wpas-'.$this->id.' wpas-'.$this->type.'-field wpas-field form-group">';
             if ($this->label) {
                 $output .= '<div class="label-container"><label class="control-label" for="'.$this->id.'">'.$this->label.'</label></div>';
             }
