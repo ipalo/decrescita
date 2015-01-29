@@ -9,7 +9,6 @@ article header .categories a.label{
 	font-weight: bold;
 	font-family: "Cabin","Lucida Grande","Lucida Sans Unicode",Arial,sans-serif;
 	color: #000;
-	background-color: #f1f1f1;
 	text-transform: uppercase;
 	padding: 0 2px;
 }
@@ -21,8 +20,16 @@ article header .categories a.label:active{
 }
 
 article header .entry-title a{
-		color: #fcb421;
-	}
+	color: #a01d21;
+	text-decoration: none;
+	border-bottom: 2px solid #a01d21;
+}
+
+article header .entry-title a:hover,
+article header .entry-title a:active{
+	text-decoration: none;
+	border-bottom: 2px solid #000;
+}
 
 article.post h2{
 	margin-top: 10px;
@@ -35,8 +42,7 @@ article header .post.categories {
 .temi .label{
 	font-size: 100%;
 	font-weight: normal;
-	color: #a01d21;
-	background-color: #ebebe7;
+	color: #999;
 	padding: 0 2px;
 	text-transform: lowercase;
 	line-height: 1.7em;
@@ -44,8 +50,8 @@ article header .post.categories {
 
 .temi a.label:hover,
 .temi a.label:active{
-	color: #fff;
-	background-color: #A01D21;
+	color: #A01D21;
+	text-decoration: underline;
 }
 
 article .wp-post-image{
