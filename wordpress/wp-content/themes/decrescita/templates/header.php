@@ -6,7 +6,6 @@
     <p class="descrizione"><?php bloginfo('description'); ?></p>
   </div>
   <div id="menu-strumenti" class="col-md-8 navbar navbar-default">
-    <span class="glyphicon glyphicon-tasks"></span> 
     <?php
       if (has_nav_menu('menu_strumenti')) :
         wp_nav_menu(array('theme_location' => 'menu_strumenti', 'menu_class' => 'nav nav-pills navbar-right'));
