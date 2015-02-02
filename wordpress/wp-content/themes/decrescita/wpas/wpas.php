@@ -192,6 +192,9 @@ if (!class_exists('WP_Advanced_Search')) {
                                 }
                                 $output .= $this->html_field($field);
                                 break;
+                            case 'break_row':
+                                $output .= '</div><div class="row">';
+                                break;
                             case 'generic':
                                 $output .= $this->generic_field($field);
                                 break;

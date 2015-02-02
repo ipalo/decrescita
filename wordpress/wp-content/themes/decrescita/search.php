@@ -5,10 +5,13 @@ Template Name: Ricerca avanzata
 define('WPAS_DEBUG', false);
 ?>
 
-<div id="advanced-search-form" class="row">
-	<div class="col-md-12">
-		<h1>Ricerca</h1>
-
+<div id="advanced-search-form">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Ricerca</h1>
+		</div>
+	</div>
+	<div class="row">
 		<?php 
 
 			$args = array();
@@ -25,7 +28,14 @@ define('WPAS_DEBUG', false);
 			$args['fields'][] = array('type' => 'search',
 		                            'label' => 'Cerca',
 		                            'placeholder' => 'cosa stai cercando?',
-		                            'class' => 'form-control');				
+		                            'class' => 'form-control',
+		                            'div_class' => 'col-md-4');				
+
+			$args['fields'][] = array('type' => 'submit',
+			                        'value' => 'Cerca',
+			                        'class' => '');
+
+			$args['fields'][] = array('type' => 'break_row');
 
 			$args['fields'][] = array('type' => 'taxonomy',
 		                            'label' => 'Categoria',
@@ -55,9 +65,6 @@ define('WPAS_DEBUG', false);
 		                            'operator' => 'IN',
 		                        	'class' => 'form-control');
 
-			$args['fields'][] = array('type' => 'submit',
-		                            'value' => 'Cerca');
-
 			$search = new WP_Advanced_Search($args);
 
 			$search->the_form();
@@ -65,7 +72,7 @@ define('WPAS_DEBUG', false);
 			$temp_query = $wp_query;
 			$wp_query = $search->query();
 
-			//if(!empty($wp_query->query['s']) OR !empty($wp_query->query['tax_query'])) :
+			if(!empty($wp_query->query['s']) OR !empty($wp_query->query['tax_query'])) :
 		?>
 	</div>
 </div>
@@ -90,7 +97,7 @@ define('WPAS_DEBUG', false);
 <?php endif; ?>
 
 <?php 	
-	//endif;
+	endif;
 
 	$wp_query = $temp_query;
 	wp_reset_query();

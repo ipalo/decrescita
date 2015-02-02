@@ -6,7 +6,7 @@ if(!empty($terms)) : ?>
 			echo '<span class="group-temi">temi:</span> ';
 		}
 		foreach($terms as $term) {
-			echo '<a class="label label-categoria" href="'.get_term_link($term->slug, 'temi').'" title="'.esc_attr(sprintf(__( "Tutti gli articoli in %s", 'decrescita'), $term->name)).'">'.$term->name.'</a> ';
+			echo '<a class="label label-temi" href="'.get_term_link($term->slug, 'temi').'" title="'.esc_attr(sprintf(__( "Tutti gli articoli in %s", 'decrescita'), $term->name)).'">'.$term->name.'</a> ';
 		} ?>
 	</p>
 <?php endif; ?>

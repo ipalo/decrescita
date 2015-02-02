@@ -83,7 +83,7 @@
       if(!empty($terms)) {
         $out = '';
         foreach($terms as $term) {
-          $out .= '<a class="label label-categoria" href="'.get_term_link($term->slug, 'temi').'" title="'.esc_attr(sprintf(__( "Tutti gli articoli in %s", 'decrescita'), $term->name)).'">'.$term->name.'</a>, ';
+          $out .= '<a class="label label-temi" href="'.get_term_link($term->slug, 'temi').'" title="'.esc_attr(sprintf(__( "Tutti gli articoli in %s", 'decrescita'), $term->name)).'">'.$term->name.'</a>, ';
         }
         echo rtrim($out, ", ");
       }

@@ -7,6 +7,7 @@ Class WPAS_Field {
     private $id;
     private $name;
     private $classes;
+    private $div_class;
     private $attributes;
     private $label;
     private $type;
@@ -23,7 +24,8 @@ Class WPAS_Field {
                             'placeholder' => false,
                             'values' => array(),
                             'allow_null' => false,
-                            'default_all' => false
+                            'default_all' => false,
+                            'div_class' => ''
                             );
 
         $this->name = $field_name;
@@ -47,6 +49,7 @@ Class WPAS_Field {
         $this->format = $format;
         $this->values = $values;
         $this->placeholder = $placeholder;
+        $this->div_class = $div_class;
 
         // For select fields, add null value if specified
         if ($format == 'select' && $allow_null && !empty($values)) {
@@ -94,8 +97,8 @@ Class WPAS_Field {
     }
 
     function build_field() {
-        if ($this->format != 'hidden') {
-            $output = '<div id="wpas-'.$this->id.'" class="wpas-'.$this->id.' wpas-'.$this->type.'-field wpas-field form-group">';
+        if ($this->format != 'hidden' AND $this->type != 'break_row') {
+            $output = '<div id="wpas-'.$this->id.'" class="wpas-'.$this->id.' wpas-'.$this->type.'-field wpas-field form-group '.($this->div_class ? : '' ).'">';
             if ($this->label) {
                 $output .= '<div class="label-container"><label class="control-label" for="'.$this->id.'">'.$this->label.'</label></div>';
             }
@@ -129,7 +132,7 @@ Class WPAS_Field {
                 $output .= $this->submit();
                 break;
         }
-        if ($this->format != 'hidden') {
+        if ($this->format != 'hidden' AND $this->type != 'break_row') {
          $output .= '</div>';
         }
         return $output;
