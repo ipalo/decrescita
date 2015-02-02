@@ -11,7 +11,7 @@
     	left:15px;  
     	width: 250px; 
     	padding: 10px;
-    	background-color: #FCB421; 
+    	background-color: rgba(255, 255, 255, 0.9); 
 	}
 
 	#sponsored .description .label{
@@ -20,27 +20,33 @@
 
 	#sponsored .description a{
 		text-transform: uppercase;
-		color: #fff;
-		font-weight: normal;
+		color: #000;
+		font-weight: bold;
 		font-size: 90%;
 	}
 
-	#sponsored .description a:hover, #sponsored .description a:visited, #sponsored .description a:active{
-		text-decoration: underline;
+	#sponsored .description a:hover, #sponsored .description a:active{
+		text-decoration: none;
+		color: #fff;
+		background-color: #fcb421;
+		border-radius: 6px;
+		-webkit-border-radius: 6px;
+		-moz-border-radius: 6px;
+		padding: 0px 5px;
 	}
 
-	#sponsored .description h4 a{
-	    color: #fff;
+	#sponsored .description > h4 a{
+	    color: #A01D21;
 	    text-decoration: none;
 	    text-transform:none;
-	    font-weight: bold;
 	    font-size: 100%;
 	}
 
-	#sponsored .description h4 a:hover, #sponsored .description h4 a:visited, #sponsored .description h4 a:active{
+	#sponsored .description > h4 a:hover, #sponsored .description > h4 a:active{
 	    background-color: #fff;
 	    text-decoration: none;
-	    color: #000;
+	    color: #A01D21;
+	    border-radius: 0px;
 	}
 
 	//Main 
