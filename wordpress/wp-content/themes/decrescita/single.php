@@ -2,7 +2,6 @@
   <article <?php post_class(); ?>>
   	<div class="row">
 	    <header class="col-md-12">
-	      	<?php get_template_part('templates/entry-categories'); ?>
 	      	<h2 class="entry-title"><?php the_title(); ?></h2>
 	      	<?php if(has_category('eventi')) : ?>
 	      		<?php if(get_field("quando")) : ?>
@@ -33,6 +32,7 @@
 
 	      </div>
 	      <footer class="entry-footer">
+	      	<?php get_template_part('templates/entry-categories'); ?>
 	      	<?php get_template_part('templates/entry-temi'); ?>
 	      	<?php get_template_part('templates/entry-persone'); ?>
 	      	<?php get_template_part('templates/entry-glossario'); ?>
