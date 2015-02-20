@@ -16,7 +16,7 @@
 	      <div class="entry-content">
 	      	<?php if(has_category('eventi')) : ?>
 		      	<?php $luogo = get_field('luogo');
-		      		if(!empty($luogo)):	?>
+		      		if(!empty($luogo['address'])):	?>
 			      	<div class="acf-map">
 			      		<div class="marker" data-title="<?php echo $luogo['address']; ?>" data-lat="<?php echo $luogo['lat']; ?>" data-lng="<?php echo $luogo['lng']; ?>">
 			      			<div id="gmap-bodyContent" style="max-width: 400px;line-height: normal;white-space: nowrap;overflow: auto;">

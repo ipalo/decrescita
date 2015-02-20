@@ -12,6 +12,7 @@ define('WPAS_DEBUG', false);
 		</div>
 	</div>
 	<div class="row">
+		<div class="col-md-12">
 		<?php 
 
 			$args = array();
@@ -29,41 +30,47 @@ define('WPAS_DEBUG', false);
 		                            'label' => 'Cerca',
 		                            'placeholder' => 'cosa stai cercando?',
 		                            'class' => 'form-control',
-		                            'div_class' => 'col-md-4');				
+		                            'div_class' => 'col-md-5');				
 
 			$args['fields'][] = array('type' => 'submit',
+									'label' => '&nbsp;',
 			                        'value' => 'Cerca',
-			                        'class' => '');
+			                        'class' => '',
+			                        'div_class' => 'col-md-1');
 
 			$args['fields'][] = array('type' => 'break_row');
 
 			$args['fields'][] = array('type' => 'taxonomy',
-		                            'label' => 'Categoria',
+		                            'label' => 'Categorie',
 		                            'taxonomy' => 'category',
 		                            'format' => 'multi-select',
 		                            'operator' => 'AND',
-		                            'class' => 'form-control');
+		                            'class' => 'form-control',
+		                            'div_class' => 'col-md-3');
 
 			$args['fields'][] = array('type' => 'taxonomy',
-		                            'label' => 'Tema',
+		                            'label' => 'Temi',
 		                            'taxonomy' => 'temi',
 		                            'format' => 'multi-select',
 		                            'operator' => 'AND',
-		                        	'class' => 'form-control');
+		                        	'class' => 'form-control',
+		                            'div_class' => 'col-md-3');
 
 			$args['fields'][] = array('type' => 'taxonomy',
 		                            'label' => 'Tags',
 		                            'taxonomy' => 'post_tag',
 		                            'format' => 'multi-select',
 		                            'operator' => 'IN',
-		                        	'class' => 'form-control');
+		                        	'class' => 'form-control',
+		                            'div_class' => 'col-md-3');
 
 			$args['fields'][] = array('type' => 'taxonomy',
 		                            'label' => 'Persone',
 		                            'taxonomy' => 'persone',
 		                            'format' => 'multi-select',
 		                            'operator' => 'IN',
-		                        	'class' => 'form-control');
+		                        	'class' => 'form-control',
+		                            'div_class' => 'col-md-3');
 
 			$search = new WP_Advanced_Search($args);
 
@@ -74,6 +81,7 @@ define('WPAS_DEBUG', false);
 
 			if(!empty($wp_query->query['s']) OR !empty($wp_query->query['tax_query'])) :
 		?>
+		</div>
 	</div>
 </div>
 	

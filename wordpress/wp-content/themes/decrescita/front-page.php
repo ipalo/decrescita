@@ -51,7 +51,7 @@
 				<?php while ( $eventi->have_posts() ) : $eventi->the_post(); ?>
 					<li>
 						<h4><a href="<?php the_permalink();?>"><?php the_title();?></a></h4>
-						<em class="time quando"><?php the_field('quando'); ?></em>
+						<p class="time quando"><?php the_field('quando'); ?></p>
 						<?php the_excerpt(); ?>
 					</li>
 				<?php endwhile;

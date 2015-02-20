@@ -3,6 +3,11 @@
 		<header>
 			<?php get_template_part('templates/entry-categories'); ?>
 			<h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+			<?php if(has_category('eventi')) : ?>
+	      		<?php if(get_field("quando")) : ?>
+	      			<p class="quando"><?php the_field('quando'); ?></p>
+	  			<?php endif; ?>
+	  		<?php endif; ?>
 		</header>
 	<?php endif; ?>
 	<div class="entry-content">

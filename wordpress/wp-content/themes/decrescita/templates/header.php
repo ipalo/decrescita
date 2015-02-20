@@ -6,11 +6,10 @@
     <p class="descrizione"><?php bloginfo('description'); ?></p>
   </div>
   <div id="menu-strumenti" class="col-md-8 navbar navbar-default">
-    <?php
-      if (has_nav_menu('menu_strumenti')) :
-        wp_nav_menu(array('theme_location' => 'menu_strumenti', 'menu_class' => 'nav nav-pills navbar-right'));
-      endif;
-    ?>
+    <ul class="nav nav-pills navbar-right" id="menu-menu-strumenti">
+      <li class="menu-mappa"><a href="http://ipalo/decrescita.it/wordpress/mappa-del-sito/">Mappa del sito</a></li>
+      <li class="menu-ricerca"><?php get_template_part('templates/morphing-search'); ?></li>
+    </ul>
   </div>
   <header id="menu-istituzionale" class="col-md-8 navbar navbar-default" role="navigation">
       <div class="navbar-header">

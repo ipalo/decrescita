@@ -253,7 +253,7 @@ Class WPAS_Field {
     }
 
     function submit() {
-        $output = '<div class="label-container"><label></label></div><button type="submit" class="btn btn-primary wpas-submit'.$this->classes.'" '.$this->add_attributes().'>'.esc_attr($this->values).'</button>';
+        $output = '<button type="submit" class="btn btn-primary wpas-submit'.$this->classes.'" '.$this->add_attributes().'>'.esc_attr($this->values).'</button>';
         return $output;
     }
 

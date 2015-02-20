@@ -133,7 +133,8 @@ if (!class_exists('WP_Advanced_Search')) {
                                 'method' => 'GET',
                                 'id' => 'wp-advanced-search',
                                 'name' => 'wp-advanced-search',
-                                'class' => 'search-form form-inline');
+                                'class' => 'search-form form-inline',
+                                'row_wrap' => true);
 
             $args = wp_parse_args($this->form_args, $defaults);
 
@@ -150,7 +151,8 @@ if (!class_exists('WP_Advanced_Search')) {
                 $page = 1;
             }
 
-            $output = '<form role="search" id="'.$args['id'].'" name="'.$args['name'].'" class="'.$args['class'].'" method="'.$args['method'].'" action="'.$args['action'].'"><div class="row">';
+            $output = '<form role="search" id="'.$args['id'].'" name="'.$args['name'].'" class="'.$args['class'].'" method="'.$args['method'].'" action="'.$args['action'].'">';
+            $output .= $args['row_wrap'] ? '<div class="row">' : '';
 
                 // URL fix if pretty permalinks are not enabled
                 if ( get_option('permalink_structure') == '' ) { 
@@ -222,8 +224,8 @@ if (!class_exists('WP_Advanced_Search')) {
             }
 
             $output .= '<input type="hidden" name="wpas" value="1">';
-
-            $output .= '</div></form>';
+            $output .= $args['row_wrap'] ? '</div>' : '';
+            $output .= '</form>';
             $this->the_form = $output;
         }
 
