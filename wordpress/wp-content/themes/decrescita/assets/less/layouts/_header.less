@@ -1,8 +1,7 @@
 .banner { }
 
-#hairs {
-	padding-top:15px;
-	padding-bottom:15px;
+#logobox {
+	margin: 10px 0;
 }
 
 ul.nav li.dropdown:hover > ul.dropdown-menu{
@@ -42,36 +41,51 @@ ul.nav li.dropdown:hover > ul.dropdown-menu{
 }
 
 #menu-strumenti {
-	padding: 0 15px 0 0;
+	position: absolute;
+	top:0;
+	right: 0;
+	background-color: transparent;
 }
 
-#menu-strumenti ul > li > a {
+#menu-strumenti .mappa {
 	padding: 5px 6px;
 	background-color: #ebebe7;
 	margin-right: 5px;
 }
+#menu-strumenti .ricerca {
+	float:right;
+	margin-right: 15px;
+}
 
 // Menù istituzionale  
-
-#menu-istituzionale {
-	padding:0;
+@media (min-width: @screen-md-min) {
+	#hairs {
+		position: relative;
+	}
+	#menu_istituzionale {
+		margin-top: 48px;
+		position: absolute;
+		bottom:0;
+		right:15px
+	}
 }
-
-#menu-istituzionale .navbar-nav > li:hover,
-#menu-istituzionale .navbar-nav > li.active {
+#menu_istituzionale .navbar-nav > li:hover {
 	background-color: #eee;
 }
+#menu_istituzionale .navbar-nav > li.active {
+	background-color: #a01d21;
+}
 
-#menu-istituzionale .navbar-nav > li > a {
+#menu_istituzionale .navbar-nav > li > a {
 	color: #000;
 	text-transform: uppercase;
     padding-bottom: 0;
-    padding-top: 10px;
+    padding-top: 5px;
     margin-bottom: 5px;
     background-color: #fff;
 }
 
-#menu-istituzionale > li > .dropdown-menu {
+#menu_istituzionale .navbar-nav > li > .dropdown-menu {
 	border: none;
 	border-top: 5px solid #eee;
 	border-bottom: 5px solid #eee;

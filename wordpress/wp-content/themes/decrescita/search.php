@@ -5,14 +5,6 @@ Template Name: Ricerca avanzata
 define('WPAS_DEBUG', false);
 ?>
 
-<div id="advanced-search-form">
-	<div class="row">
-		<div class="col-md-12">
-			<h1>Ricerca</h1>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-12">
 		<?php 
 
 			$args = array();
@@ -27,13 +19,13 @@ define('WPAS_DEBUG', false);
 		                            'orderby' => 'date');
 
 			$args['fields'][] = array('type' => 'search',
-		                            'label' => 'Cerca',
+		                            'label' => '',
 		                            'placeholder' => 'cosa stai cercando?',
 		                            'class' => 'form-control',
 		                            'div_class' => 'col-md-5');				
 
 			$args['fields'][] = array('type' => 'submit',
-									'label' => '&nbsp;',
+									'label' => '',
 			                        'value' => 'Cerca',
 			                        'class' => '',
 			                        'div_class' => 'col-md-1');
@@ -74,16 +66,14 @@ define('WPAS_DEBUG', false);
 
 			$search = new WP_Advanced_Search($args);
 
-			$search->the_form();
+			//$search->the_form();
 
 			$temp_query = $wp_query;
 			$wp_query = $search->query();
 
 			if(!empty($wp_query->query['s']) OR !empty($wp_query->query['tax_query'])) :
 		?>
-		</div>
-	</div>
-</div>
+	
 	
 <div class="row">
 	<div class="page-header col-md-12">

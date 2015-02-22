@@ -16,21 +16,21 @@ function roots_title() {
     } elseif (is_post_type_archive()) {
       return apply_filters('the_title', get_queried_object()->labels->name);
     } elseif (is_day()) {
-      return sprintf(__('Articoli per data: %s', 'decrescita'), get_the_date());
+      return sprintf(__('Articoli del %s', 'decrescita'), get_the_date());
     } elseif (is_month()) {
-      return sprintf(__('Articoli per mese: %s', 'decrescita'), get_the_date('F Y'));
+      return sprintf(__('Articoli di %s', 'decrescita'), get_the_date('F Y'));
     } elseif (is_year()) {
-      return sprintf(__('Articoli per anno: %s', 'decrescita'), get_the_date('Y'));
+      return sprintf(__('Articoli del %s', 'decrescita'), get_the_date('Y'));
     } elseif (is_author()) {
       $author = get_queried_object();
-      return sprintf(__('Tutti gli articoli di %s', 'decrescita'), apply_filters('the_author', is_object($author) ? $author->display_name : null));
+      return sprintf(__('Articoli pubblicati da %s', 'decrescita'), apply_filters('the_author', is_object($author) ? $author->display_name : null));
     } else {
       return single_cat_title('', false);
     }
   } elseif (is_search()) {
-    return sprintf(__('Risultati per la ricerca di "%s"', 'decrescita'), get_search_query());
+    return sprintf(__('Ricerca per "%s"', 'decrescita'), get_search_query());
   } elseif (is_404()) {
-    return __('Ooops! Pagina non trovata (errore 404)', 'decrescita');
+    return __('Oops! Pagina non trovata', 'decrescita');
   } else {
     return get_the_title();
   }

@@ -97,8 +97,9 @@ Class WPAS_Field {
     }
 
     function build_field() {
-        if ($this->format != 'hidden' AND $this->type != 'break_row') {
-            $output = '<div id="wpas-'.$this->id.'" class="wpas-'.$this->id.' wpas-'.$this->type.'-field wpas-field form-group '.($this->div_class ? : '' ).'">';
+        $output = '';
+        if ($this->format != 'hidden' AND $this->type != 'break_row' AND $this->format != 'text' AND $this->format != 'submit') {
+            $output .= '<div id="wpas-'.$this->id.'" class="wpas-'.$this->id.' wpas-'.$this->type.'-field wpas-field form-group '.($this->div_class ? : '' ).'">';
             if ($this->label) {
                 $output .= '<div class="label-container"><label class="control-label" for="'.$this->id.'">'.$this->label.'</label></div>';
             }
@@ -132,7 +133,7 @@ Class WPAS_Field {
                 $output .= $this->submit();
                 break;
         }
-        if ($this->format != 'hidden' AND $this->type != 'break_row') {
+        if ($this->format != 'hidden' AND $this->type != 'break_row' AND $this->format != 'text' AND $this->format != 'submit') {
          $output .= '</div>';
         }
         return $output;
@@ -253,7 +254,7 @@ Class WPAS_Field {
     }
 
     function submit() {
-        $output = '<button type="submit" class="btn btn-primary wpas-submit'.$this->classes.'" '.$this->add_attributes().'>'.esc_attr($this->values).'</button>';
+        $output = '<button type="submit" class="btn btn-primary wpas-submit'.$this->classes.'" '.$this->add_attributes().'><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>';
         return $output;
     }
 

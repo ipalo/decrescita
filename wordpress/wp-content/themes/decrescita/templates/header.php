@@ -1,17 +1,11 @@
  <div id="hairs" class="row">
-  <div class="col-md-4">
+  <div id="logobox" class="col-md-4 vbottom">
     <a class="logo-decrescita text-hide" href="<?php echo esc_url(home_url('/')); ?>">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-decrescita.png" title="la Decrescita" alt="la Decrescita">
     </a>    
     <p class="descrizione"><?php bloginfo('description'); ?></p>
   </div>
-  <div id="menu-strumenti" class="col-md-8 navbar navbar-default">
-    <ul class="nav nav-pills navbar-right" id="menu-menu-strumenti">
-      <li class="menu-mappa"><a href="http://ipalo/decrescita.it/wordpress/mappa-del-sito/">Mappa del sito</a></li>
-      <li class="menu-ricerca"><?php get_template_part('templates/morphing-search'); ?></li>
-    </ul>
-  </div>
-  <header id="menu-istituzionale" class="col-md-8 navbar navbar-default" role="navigation">
+  <header id="menu_istituzionale" class="col-md-8 navbar navbar-default vbottom" role="navigation">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-istituzionale-collapse">
           <span class="sr-only">Toggle navigation</span>
@@ -29,6 +23,9 @@
         ?>
       </nav>
   </header>
+  <div id="menu-strumenti">
+      <div class="ricerca"><?php get_template_part('templates/searchform'); ?></div>
+  </div>
 </div>
 <!--<div id="tools-menu" class="row">
   <div class="right">

@@ -197,6 +197,12 @@ if (!class_exists('WP_Advanced_Search')) {
                             case 'break_row':
                                 $output .= '</div><div class="row">';
                                 break;
+                            case 'begin_filters':
+                                $output .= '<div class="morphsearch-content"><div class="row">';
+                                break;
+                            case 'end_filters':
+                                $output .= '</div></div>';
+                                break;
                             case 'generic':
                                 $output .= $this->generic_field($field);
                                 break;

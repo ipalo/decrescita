@@ -1,7 +1,7 @@
 <div id="morphsearch" class="morphsearch">
 	<form class="morphsearch-form">
 		<input class="morphsearch-input" type="search" placeholder="Cerca..."/>
-		<button class="morphsearch-submit" type="submit">Cerca</button>
+		<button class="morphsearch-submit" type="submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
 		<div class="morphsearch-content">
 			<div class="row">
 				<div class="wpas-tax_category wpas-taxonomy-field wpas-field form-group col-md-3" id="wpas-tax_category">
@@ -63,7 +63,7 @@
 .morphsearch {
 	width: 200px;
 	min-height: 40px;
-	background: #f1f1f1;
+	background: #e1e1e1;
 	
 	z-index: 10000;
 	top: 50px;
@@ -114,7 +114,7 @@
 	border: none;
 	background: transparent;
 	font-size: 0.8em;
-	color: #ec5a62;
+	color: #a01d21;
 	-webkit-transition: font-size 0.5s cubic-bezier(0.7,0,0.3,1);
 	transition: font-size 0.5s cubic-bezier(0.7,0,0.3,1);
 }
@@ -255,7 +255,7 @@ input[type="search"] { /* reset normalize */
 	height: 0;
 	overflow: hidden;
 	padding: 0 10.5%;
-	background: #f1f1f1;
+	background: #e1e1e1;
 	position: absolute;
 	pointer-events: none;
 	opacity: 0;

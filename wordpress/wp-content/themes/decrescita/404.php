@@ -1,9 +1,6 @@
 <?php get_template_part('templates/page', 'header'); ?>
 
-<p><?php _e('Purtroppo quello che stai cercando non si trova qui.', 'decrescita'); ?> <?php _e('Probabilmente il problema è dovuto a:', 'decrescita'); ?></p>
-<ul>
-  <li><?php _e('un errore di digitazione dell\'indirizzo della pagina', 'decrescita'); ?></li>
-  <li><?php _e('un link non valido', 'decrescita'); ?></li>
-</ul>
+<p><?php _e('Purtroppo questa pagina non esiste, c\'è un errore nell\'indirizzo della pagina oppure il contentuto è stato spostato o eliminato.', 'decrescita'); ?></p>
+<p><?php _e('Controlla la URL nella barra degli indirizzi oppure prova a fare una ricerca.', 'decrescita'); ?></p>
 
-<?php get_template_part('advanced-search'); ?>
+<?php get_template_part('search'); ?>
